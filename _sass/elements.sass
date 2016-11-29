@@ -395,6 +395,13 @@
       margin-top: 0
     &:last-child
       margin-bottom: 0
+    img
+      display: inherit
+      margin: auto
+    img + em
+      display: inline-block
+      width: 100%
+      text-align: center
   pre
     line-height: 1.25
     position: relative
@@ -431,7 +438,34 @@
           width: 20%
   figure.highlight
     margin: 30px -30px
-    overflow: auto
+    pre
+      white-space: pre-wrap
+      abbr, acronym
+        border-bottom: .1em dashed
+        border-color: #60B5CC
+        cursor: help
+        position: relative
+
+      abbr:hover::after
+        background: #1496bb
+        opacity: 1 !important
+        overflow-x: visible
+        display: inline-block
+        white-space: nowrap
+        border-radius: 2px
+        color: #fff
+        pointer-events: none
+        padding: 10px
+        position: absolute
+        left: 0
+        margin-left: auto
+        margin-right: auto
+        bottom: 100%
+        font-size: 1em
+        line-height: 1em
+        content: attr(title)
+        min-width: 100px
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28)
     pre code
       +label
       background: inherit
@@ -560,7 +594,7 @@
     font-weight: 500
     text-align: left
     overflow: hidden
-      
+
 .typed-cursor
   opacity: 1
   -webkit-animation: blink 1s infinite
