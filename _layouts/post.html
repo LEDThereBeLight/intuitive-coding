@@ -59,6 +59,14 @@ route: post
         <ul></ul>
       </nav>
 
+      {% if page.example %}
+      <article class="content">
+        <div id="{{ page.example }}"></div>
+        <script src="javascript/{{ page.example }}.js"></script>
+        <script>Elm.Main.embed(document.querySelector('#{{ page.example }}'))</script>
+      </article>
+      {% endif %}
+
       <article class="content">
         {{ content }}
       </article>

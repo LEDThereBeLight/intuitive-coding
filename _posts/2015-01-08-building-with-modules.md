@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Elm <strong>Links</strong>"
-subtitle: "The <strong>core</strong> of the Web"
+title: "Modules"
+subtitle: "Standing on the shoulders of giants"
 section: elm
 ---
 
-### More on functions
+### Getting functions from other places
 
-We still have a few more words to learn before we understand everything.
+Here's our code again.
 
 {% highlight hs %}
 import Html
@@ -21,7 +21,7 @@ First, on why Html is capitalized.
 
 ### Modules
 
-People have been writing code for a long time. It would be pretty ridiculous to have to reinvent every function we want to use when most things we can think of have already been created. So programming has a way to import functions from other places to use in our code. There are many ways to accomplish this, but Elm uses a modern system called **modules**.
+People have been writing code for a long time. It would be pretty ridiculous to have to reinvent every function we want to use when most things we can think of have already been created. So programming has a way to import functions from other places to use in our code. There are many ways to accomplish this, but Elm uses a modern approach called **modules**.
 
 A **module** is a just a file. Every file we write is a different module. You can think of a module like a box with a bunch of functions inside. We might have a Math module which has functions for addition and subtraction, or a String module which has functions for uppercasing or lowercasing words.
 
@@ -37,6 +37,6 @@ We can use the Html module's text function to display our sentence on the page.
 
 Let's talk about the `.` in between Html and text now.
 
-In programming languages, it's common to use the `.` symbol to mean *"look inside"*. It doesn't always mean this, but that's a good first guess whenever you see a `.` in a new language. In Elm, the `.` almost always means to "look inside."
+In programming languages, it's common to use the `.` symbol to mean *"look inside."* It doesn't always mean this, but that's a good first guess whenever you see a `.` in a new language. In Elm, the `.` almost always means to "look inside."
 
 So to translate `Html.text` into English, we could say "Look inside the Html module for a function called text."

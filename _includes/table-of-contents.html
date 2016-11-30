@@ -2,12 +2,12 @@
   <div class="container">
     <article class="toc-section toc-section--web">
       <div class="toc-heading">
-        <i class="fa fa-globe"></i>
+        <i class="fa fa-code"></i>
         <h3>
-          <a href="/introduction.html">Web</a>
+          <a href="/introduction.html">Starting to Code</a>
         </h3>
         <small>
-          <span>3</span> lessons
+          <span>10</span> lessons
         </small>
         <em>
           For absolute <strong>beginners</strong>
@@ -16,7 +16,7 @@
       <ol class="toc-content">
         {% for post in site.posts reversed %}
           {% capture currentsection %}{{ post.section }}{% endcapture %}
-          {% if currentsection == "web" %}
+          {% if currentsection == "elm" %}
             {% capture currentmonth %}{{ post.date | date: "%m" }}{% endcapture %}
             {% if currentmonth != month %}
               <li class="toc-month">
@@ -38,7 +38,7 @@
       </ol>
     </article>
 
-    <article class="toc-section toc-section--html5">
+    <!-- <article class="toc-section toc-section--html5">
       <div class="toc-heading">
         <i class="fa fa-html5"></i>
         <h3>
@@ -54,7 +54,7 @@
       <ol class="toc-content">
         {% for post in site.posts reversed %}
           {% capture currentsection %}{{ post.section }}{% endcapture %}
-          {% if currentsection == "html" %}
+          {% if currentsection == "elm" %}
             {% capture currentmonth %}{{ post.date | date: "%m" }}{% endcapture %}
             {% if currentmonth != month %}
               <li class="toc-month">
@@ -74,9 +74,9 @@
           {% endif %}
         {% endfor %}
       </ol>
-    </article>
+    </article> -->
 
-    <article class="toc-section toc-section--css3">
+    <!-- <article class="toc-section toc-section--css3">
       <div class="toc-heading">
         <i class="fa fa-css3"></i>
         <h3>
@@ -112,9 +112,9 @@
           {% endif %}
         {% endfor %}
       </ol>
-    </article>
+    </article> -->
 
-    <article class="toc-section toc-section--sass">
+    <!-- <article class="toc-section toc-section--sass">
       <div class="toc-heading">
         <i class="fa fa-rocket"></i>
         <h3>
@@ -150,6 +150,6 @@
           {% endif %}
         {% endfor %}
       </ol>
-    </article>
+    </article> -->
   </div>
 </section>

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Elm <strong>Links</strong>"
-subtitle: "The <strong>core</strong> of the Web"
+title: "Cookies"
+subtitle: "How to <strong>ask</strong> a computer for something"
 section: elm
 ---
 
@@ -31,7 +31,13 @@ So how do we use a function? It's easy. All we have to do is get its attention. 
 
 <!-- We can answer its questions all at once, and it will run, or we can answer some of them now and keep the function around to run later. -->
 
-Remember the code we just wrote? It uses a function.
+Remember the code we just wrote? Well, here it is again in case you forgot.
+
+{% highlight haskell %}
+import Html
+
+main = Html.text "Sucking at something is the first step towards being sorta good at something."
+{% endhighlight %}
 
 `Html.text` is a function that takes one input: a string of text to show on the screen. It gives us back code for a webpage, which the Elm language uses to display on the page.
 
