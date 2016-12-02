@@ -56,7 +56,7 @@
     +replace(url("/images/marksheet-hello.png"), 420px, 384px)
 
 .logo
-  +replace(url("/images/marksheet-logo.png"), 230px, 48px)
+  //+replace(url("/images/marksheet-logo.png"), 230px, 48px)
   float: left
   left: 10px
   position: absolute
@@ -404,6 +404,10 @@
       display: inline-block
       width: 100%
       text-align: center
+  p.answer img
+    text-align: left
+    margin: 0
+    box-shadow: none
   pre
     line-height: 1.25
     position: relative

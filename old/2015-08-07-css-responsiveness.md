@@ -24,7 +24,7 @@ browser
 : the software running: Firefox, Google Chrome, Safari, Internet Explorer
 
 viewport
-: the region within the browser that actually displays the webpage 
+: the region within the browser that actually displays the webpage
 
 ![Difference between a device, a browser, and a viewport](/images/device-browser-viewport.png)
 
@@ -190,11 +190,11 @@ A use case would be to provide a default background image for every device, and 
 
 {% highlight css %}
 /* 40x40 logo */
-.logo{ background-image: url(marksheet-logo.png); background-size: 40px 40px;}
+//.logo{ background-image: url(marksheet-logo.png); background-size: 40px 40px;}
 
 @media (min-resolution: 300dpi) {
   /* 80x80 logo resized to 40x40 */
-  .logo{ background-image: url(marksheet-logo@2x.png);}
+  //.logo{ background-image: url(marksheet-logo@2x.png);}
 }
 {% endhighlight %}
 
@@ -257,5 +257,3 @@ Notice how the desktop-first `max-width` values are _1 fewer than_ the mobile-fi
 
 * `@media (min-width: 768px)` targets tablets
 * `@media (max-width: 767px)` doesn't target tablets
-
-

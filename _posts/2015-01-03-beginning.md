@@ -11,6 +11,8 @@ Open [elm-lang.org/try](http://www.elm-lang.org/try) in a new tab, and let's dra
 
 Copy and paste this Elm code into the editor and run it with the *Compile* button.
 
+**Compile** has a specific meaning in computer programming. It means to translate from one language to another. In this case, we're *compiling* from Elm to Javascript, and then the www.elm-lang.org website automatically displays the result on the other screen. But that's not important to know. What's important is that "compile" just means to translate.
+
 {% highlight haskell %}
 import Html
 

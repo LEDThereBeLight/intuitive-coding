@@ -38,23 +38,23 @@
       </ol>
     </article>
 
-    <!-- <article class="toc-section toc-section--html5">
+    <article class="toc-section toc-section--html5">
       <div class="toc-heading">
-        <i class="fa fa-html5"></i>
+        <i class="fa fa-play-circle"></i>
         <h3>
-          <a href="/html-basics.html">HTML 5</a>
+          <a href="/html-basics.html">Our first app</a>
         </h3>
         <small>
           <span>13</span> lessons
         </small>
         <em>
-          For <strong>designers</strong> willing to start coding right away
+          Let's actually <strong>build</strong> something
         </em>
       </div>
       <ol class="toc-content">
         {% for post in site.posts reversed %}
           {% capture currentsection %}{{ post.section }}{% endcapture %}
-          {% if currentsection == "elm" %}
+          {% if currentsection == "app-building" %}
             {% capture currentmonth %}{{ post.date | date: "%m" }}{% endcapture %}
             {% if currentmonth != month %}
               <li class="toc-month">
@@ -74,7 +74,7 @@
           {% endif %}
         {% endfor %}
       </ol>
-    </article> -->
+    </article>
 
     <!-- <article class="toc-section toc-section--css3">
       <div class="toc-heading">
