@@ -571,9 +571,7 @@
   max-width: 530px
   border-radius: 10px
   box-shadow: rgba(0,0,0,0.8) 0px 20px 50px
-  overflow: hidden
   transition: all 0.5s ease-out
-
   #title-bar
     text-align: center
     padding: 5px 0
@@ -585,8 +583,9 @@
     background-color: #f8f8f8
     background: linear-gradient(#e8e8e8, #bcbbbc)
     box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px
+    border-top-left-radius: inherit
+    border-top-right-radius: inherit
     border-bottom: #6a6a6a 1px solid
-
   #text-body
     height: 200px
     background-color: rgba(0,0,0,0.8)
@@ -598,7 +597,11 @@
     line-height: 1.4em
     font-weight: 500
     text-align: left
-    overflow: hidden
+    overflow: auto
+    word-wrap: break-word
+    border-bottom-left-radius: inherit
+    border-bottom-right-radius: inherit
+
 
 .typed-cursor
   opacity: 1
