@@ -45,13 +45,15 @@ But `main` is very particular about the kinds of things it is willing to show on
 
 ### Types
 
-A type is a category that we decide an expression falls into. There are lots of different types, and we always capitalize their names to make it easier to tell them apart from other kinds of words, like functions.
+A type is a category that we decide an expression falls into. Each type has a name, and we always capitalize their names to make it easier to tell them apart from other kinds of words, like functions.
 
 There are lots of different types.
 
 `'a'` is a **Character** type, because it's a single letter. Characters go inside single quotes.
 
-**List** is a type that can hold another type. Just like Characters go inside `' '`, Lists have their own symbol that they go inside. Lists use square brackets: `[ ]`. To make things clearer, each item in a list is separated by a comma.
+**List** is a type that can hold another type. A List can only contain one type of data. You can't have a List of both letters and numbers, for example. 
+
+Just like Characters go inside `' '`, Lists have their own symbol that they go inside. Lists use square brackets: `[ ]`. To make things clearer, each item in a list is separated by a comma.
 
 Say you have a bunch of individual Characters:
   * `'h'`
@@ -62,7 +64,7 @@ Say you have a bunch of individual Characters:
 
 Characters are great all by themselves, but sometimes we want to put them together to make words. We can string letters together to make words by putting them inside a List, like this:
 
-`['h', 'e', 'l', 'l', 'o']`  
+`['h', 'e', 'l', 'l', 'o']`
 
 But since it's pretty common to talk about words in our programs, we don't have to write them out as Lists of Characters with square brackets and single quotes going every which way. There's another type that exists as a kind of shorthand for Lists of Characters. It's called a **String**, and we make one with double quotes: `" "`.
 

@@ -84,19 +84,29 @@ main = Html.img [Html.Attributes.src "https://media.giphy.com/media/11s7Ke7jcNxC
 
 Progress. Now we've set the source location of our image element to an image URL, so a picture shows up on the page.
 
-### The rest of our page
+### A detour
 
-Now let's add a title for our image topic, a search bar, and a button that we will use later to trigger a search.
+By far, the most complicated part of our app is going to be the part that allows us to search for a GIF on the internet and display it on the page. We'll work up to that, but for now it makes sense to start with something slightly simpler until we can see how all the pieces of the app will fit together. 
+
+Instead of adding a search bar, for now we're going to add a few buttons that the user can click on to show GIFs from different categories. This will dramatically simplify our app and allow us to tackle the steps involved in searching the internet all at once, after we have a working app already.
+
+Here's what we're going to start with:
+
+![cats, dogs, and ice cream](/images/app-mvu.png)
+
+### Building the rest of the page
+
+Let's add the title and buttons to our page.
 
 Here are the functions we'll need:
   * `h1`, for the title
-  * `input`, for the search bar
+  <!-- * `input`, for the search bar -->
   * `button`, for the search button
   * `br`, for adding line breaks to space out our elements
 
 ### Wrapping our elements
 
-We want to add another HTML element to our `main` function, but if we do that we'll run into a problem: function definitions only accept a *single expression* as a definition. So how do we add more elements while keeping the definition of `main` as a single expression?
+We want to add some more HTML elements to our `main` function, but if we do that we'll run into a problem: function definitions only accept a *single expression* as a definition. So how do we add more elements while keeping the definition of `main` as a single expression?
 
 The answer is to use an HTML `div` element that will contain all of the page elements that we want to display. Divs are meaningless, they're just used to group together elements in a page, which is exactly what we need.
 
@@ -163,7 +173,7 @@ main = Html.div
 <div><h1>cats</h1><img src="https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif"></div>
 {: .answer}
 
-### A search bar
+<!-- ### A search bar
 
 Right under the heading, let's add a search bar that we can use to get gifs from different categories.
 
@@ -185,16 +195,18 @@ main = Html.div
 
 <div><h1>cats</h1>
 <input/><img src="https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif"></div>
-{: .answer}
+{: .answer} -->
 
-### A search button
+### Some buttons
 
-Now let's add a button that we can use to trigger a search and refresh the image.
+Now let's add a few buttons that we can press to trigger new GIFs.
 
-Add a line below the `input` element with the code `button [] [Html.text "more!"]`
+Add three lines below the `h1` element with the code `button [] [Html.text "topic"]`, and then change the text to the three categories of pictures you want to show.
 {: .info}
 
-<div><h1>cats</h1><input/><button>more!</button><img src="https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif"></div>
+We'll use cats, dogs, and ice cream for our categories.
+
+<div><h1>cats</h1><input/><button>cats</button><button>dogs</button><button>ice cream</button><img src="https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif"></div>
 {: .answer}
 
 ### Some breathing room
@@ -211,18 +223,20 @@ import Html.Attributes
 main = Html.div
   []
   [
-    h1 [] [Html.text "cats"],
-    input [] [],
-    br [] [],
-    br [] [],
-    button [] [Html.text "more!"],
-    br [] [],
-    br [] [],
-    img [Html.Attributes.src "https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif"] []
+    Html.h1 [] [Html.text "cats"],
+    Html.input [] [],
+    Html.br [] [],
+    Html.br [] [],
+    Html.button [] [Html.text "cats"],
+    Html.button [] [Html.text "dogs"],
+    Html.button [] [Html.text "ice cream"],
+    Html.br [] [],
+    Html.br [] [],
+    Html.img [Html.Attributes.src "https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif"] []
   ]
 {% endhighlight %}
 
-<div><h1>cats</h1><input/><br/><br/><button>more!</button><br/><br/><img src="https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif"></div>
+<div><h1>cats</h1><input/><br/><br/><button>cats</button><button>dogs</button><button>ice cream</button><br/><br/><img src="https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif"></div>
 {: .answer}
 
 *[div]: A division element, used to group other elements into a section
