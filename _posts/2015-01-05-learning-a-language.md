@@ -11,13 +11,23 @@ Languages let us combine expressions into structures that create larger meanings
 
 Programming languages are the same as any spoken language. We have words, we have meanings, and we have rules for how to order the words.
 
-It would be nice if we could write normal English sentences in programming languages. But languages are complex, and we still don't understand how our brains interpret them. Just think of how hard it can be to get Siri to understand what you're asking. It's even more difficult with programming languages that don't have teams of developers working on them full time. The first programming language interpreter took 18 staff years to write, just to give you an idea. We've gotten better since then, but interpreting language and converting them to computer instructions is still not a simple problem.
+Each programming language has different types of sentences, just like in natural languages. There are two main types of sentences in programming.
 
-### Settling for statements
+We have statements, where we *state* the way something is.
 
-So instead, we simplify our sentences down to a few nouns and verbs that we teach the computer to recognize, and then string them together in different combinations to create meanings. To call them "sentences" would be a little too generous, so we call them "statements" instead.
+The sky is blue.
+{: .info}
 
-A "statement" is like a stripped down sentence, without any filler words.
+And we have commands, where we tell the computer to do something.
+
+Capitalize this sentence and print it on the screen.
+{: .info}
+
+### Settling for programming languages
+
+It would be nice if we could write normal English sentences in programming languages. But natural languages are complex, and the same word in English can often mean multiple different things, which makes them pretty tough to program with. We haven't figured out how to get computers to learn how to read between the lines - just think of how frustrating it can be to get Siri to understand what you're asking. 
+
+So instead, we create new simplified languages without any filler words that can't be interpreted in multiple different ways. They don't sound as natural when you read them, but at least they're not ambiguous. 
 
 ### How to read
 

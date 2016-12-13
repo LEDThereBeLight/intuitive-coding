@@ -239,6 +239,7 @@ main = Html.div
 <div><h1>cats</h1><input/><br/><br/><button>cats</button><button>dogs</button><button>ice cream</button><br/><br/><img src="https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif"></div>
 {: .answer}
 
+*[Html]: An elm module with functions that create HTML webpage elements
 *[div]: A division element, used to group other elements into a section
 *[span]: Used to create sections within text with different formatting from the rest of the text
 *[h1]: A primary heading element for title text
