@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Imports"
-subtitle: "How to use modules in our code"
+subtitle: "Using modules in our code"
 section: elm
 ---
 
@@ -9,7 +9,7 @@ section: elm
 
 Let's finish up with the first line in our code.
 
-{% highlight haskell %}
+{% highlight elm %}
 import Html
 
 main = Html.text "Sucking at something is the first step towards being sorta good at something."

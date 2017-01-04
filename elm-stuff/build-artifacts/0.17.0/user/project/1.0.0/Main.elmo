@@ -1,0 +1,23 @@
+var _user$project$Main$recur = F2(
+	function (m, acc) {
+		recur:
+		while (true) {
+			if (_elm_lang$core$Native_Utils.eq(m, 1)) {
+				return acc;
+			} else {
+				var _v0 = m / Math.pow(acc, 3),
+					_v1 = acc + 1;
+				m = _v0;
+				acc = _v1;
+				continue recur;
+			}
+		}
+	});
+var _user$project$Main$findNb = function (m) {
+	return A2(_user$project$Main$recur, m, 1);
+};
+var _user$project$Main$main = {
+	main: _elm_lang$html$Html$text(
+		_elm_lang$core$Basics$toString(
+			_user$project$Main$findNb(4183059834009)))
+};

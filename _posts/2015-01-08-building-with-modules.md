@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Modules"
-subtitle: "Standing on the shoulders of giants"
+subtitle: "Or how to be as <strong>lazy</strong> as possible"
 section: elm
 ---
 
@@ -27,6 +27,9 @@ A **module** is a just a file. Every file we write is a different module. You ca
 
 Just like types, we always *capitalize* specific module names.
 
+![module](https://media.giphy.com/media/j1BQPAjNzKh9K/giphy.gif)
+*a module with a function inside*
+
 So `Html` is a module.
 
 The Html module is named after the HTML programming language, which was developed in the '90s to create web pages. So Elm's Html module is basically a box with a bunch of HTML functions inside. One of the functions inside the Html module is called `text`, which takes a single String as input and converts it into raw HTML to draw on the page.
@@ -36,6 +39,12 @@ We can use the Html module's text function to display our sentence on the page.
 ### Going deeper
 
 Let's talk about the `.` in between Html and text now.
+
+{% highlight hs %}
+import Html
+
+main = Html.text "Sucking at something is the first step towards being sorta good at something."
+{% endhighlight %}
 
 In programming languages, it's common to use the `.` symbol to mean *"look inside."* It doesn't always mean this, but that's a good first guess whenever you see a `.` in a new language. In Elm, the `.` almost always means to "look inside."
 

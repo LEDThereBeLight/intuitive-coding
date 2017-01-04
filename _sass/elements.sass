@@ -318,10 +318,12 @@
     padding: 60px
   a
     text-decoration: underline
+  // for in-line code blocks
   code
-    background-color: #222
+    background-color: rgba(#eee, 0.2)
     border-radius: 3px
-    color: #66d9ef
+    // color: #66d9ef
+    // border-bottom: 2px solid $blue
     font-size: $small
     padding: 1px 5px 3px
     position: relative
@@ -495,13 +497,45 @@
   .answer,
   .important,
   .info
+    border-radius: 2px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     background: rgba($blue, 0.1)
     border-left: 0.25em solid $blue
     color: rgba(black, 0.5)
     padding: 15px 20px
     +desktop
       padding: 25px 30px
+  .quote
+    border-radius: 2px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    background: rgba($pink, 0.1)
+    border-left: 0.25em solid $pink
+    color: rgba(#333, .8)
+    padding: 20px 20px 15px 50px
+    position: relative
+  .quote::before
+    content: "\201C"
+    font-family: Georgia, serif
+    font-size: 60px
+    font-weight: bold
+    color: $pink
+    position: absolute
+    left: 10px
+    top: 0px
+  .quote-text
+    background: transparent
+    font-family: inherit
+    font-size: inherit
+    border-bottom: 2px solid $pink
+    padding-bottom: 3px
+    color: rgba(#333, .8)
+    &.red
+      border-bottom: 2px solid $pink
+    &.blue
+      border-bottom: 2px solid $blue
   .answer
+    border-radius: 2px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     background: rgba($green, 0.1)
     border-left-color: $green
     .question
@@ -511,9 +545,13 @@
       + br
         display: none
   .important
+    border-radius: 2px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     background: rgba($red, 0.1)
     border-left-color: $red
   .result
+    border-radius: 2px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     +label("Result")
     border: 1px solid $yellow
     color: black
