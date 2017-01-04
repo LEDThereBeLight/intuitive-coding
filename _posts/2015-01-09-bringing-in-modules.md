@@ -19,6 +19,6 @@ Some modules are available for use in our code by default. We have access to mod
 
 Other modules are a little less common, so while they still come packaged with the Elm language, we have to specifically tell Elm we want to use them. We can do this by using an *import statement*.
 
-`import` is a type of word called a **command**. Commands are very similar to functions. We use functions to ask the computer to *give us* something, and we use commands to ask the computer to *do* something.
+`import` statements are commands: they have the effect of pulling in the module for use in our code.
 
 In this case, we're telling the computer to import the Html module and make its functions available for us to use in our code.

@@ -23,6 +23,6 @@ Javascript and Java are popular languages, but they're not easy to program in. S
 
 ### But I need to learn Javascript to get a job
 
-If you want to learn Javascript, or Python, or any other mainstream high level language, trust me when I tell you that starting with Elm to learn the underlying concepts will make your life easier. My goal is to get you to learn coding as quickly as possible, not to push any specific language on you. The concepts you will learn through Elm will all transfer over to the more mainstream languages. Once you know how to code, the language *doesn't matter*.
+If you want to learn Javascript, or Python, or any other mainstream high level language, trust me when I tell you that starting with Elm to learn the underlying concepts will make your life easier. My goal is to get you to learn coding as quickly as possible, not to push any specific language on you. The concepts you will learn through Elm will *all* transfer over to the more mainstream languages - I've excluded anything that doesn't. Besides, once you know how to code, the language *doesn't matter*.
 
 Let's begin.

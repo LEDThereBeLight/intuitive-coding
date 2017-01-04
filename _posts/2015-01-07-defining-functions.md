@@ -17,14 +17,16 @@ import Html
 main = Html.text "Sucking at something is the first step towards being sorta good at something."
 {% endhighlight %}
 
-The first line with `import Html` is a **command**, which is another type of expression that we'll come back to soon.
+Let's skip the first line with `import Html` for now.
 
-The second line says to create a new word called `main` and define it to be:
-`Html.text "Sucking at something is the first step towards being sorta good at something."`
+The second sentence is a special kind of expression, because it has that `=` symbol. It's actually a **command**. Commands are different from functional expressions. With functions, we ask the computer to *give us something*. With commands, we ask the computer to *do something*.
 
-We use the `=` symbol to make new words. "Symbol" isn't a special word - it just means a letter or group of letters. All written languages are made up of symbols that we use to create words and punctuation.
+The whole line says to create a new word called `main` and define it to be the functional expression
+`Html.text "Sucking at something is the first step towards being sorta good at something."` In programming, whenever we make a new word we call it a **variable**, because the definition varies depending on how we write our program.
 
-`=` is a function that takes two expressions as inputs:
+### Defining words
+
+We use the `=` symbol to make new words. When the Elm compiler sees the `=` symbol, it looks for two things:
 
 1. A **name** to call the new word, which we put on the left
 2. A **definition** for the new word, which we put on the right

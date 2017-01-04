@@ -22,18 +22,20 @@ The process of cleaning up our writing is called proofreading, and the process o
 
 There are a few main things we look for when refactoring, roughly in order of importance:
 
-  1. `Complex code.`{: .quote-text .blue} "Complex" literally means "built from many interconnected parts". We should try to think of our code as built from Legos that can be mixed and matched. Elm helps us out with this naturally.
-  2. `Hard to read code`{: .quote-text .blue}, like unhelpful variable names. We should be able to read our code without having to constantly look up the definitions of functions.
-  3. `Horribly inefficient code`{: .quote-text .blue}, though this takes some practice to be able to spot. It's better to have poor performance than to waste time optimizing something that doesn't need to be optimized.
-  4. `Repetition`{: .quote-text .blue}. Finding repetition means we should *consider* replacing it with a function, since it sets someone up to forget changing one of the occurrences.
+  1. **Complex code.** "Complex" literally means "built from many interconnected parts". We should try to think of our code as built from Legos that can be mixed and matched. Elm helps us out with this naturally.
+  2. **Hard to read code**, like unhelpful variable names. We should be able to read our code without having to constantly look up the definitions of functions.
+  3. **Horribly inefficient code**, though this takes some practice to be able to spot. It's better to have poor performance than to waste time optimizing something that doesn't need to be optimized. We'll get to algorithms that improve code performance in later lessons.
+  4. **Repetition**. Finding repetition means we should *consider* replacing it with a function, since it sets someone up to forget changing one of the occurrences if they want to modify our code in the future.
 
-Honestly, some repetition isn't that big of a deal. The most important thing we need to worry about is making our code *simple* and *readable*, so that whoever is coming along after us can easily understand what's going and make changes without breaking everything. 
+<!-- {: .quote-text .blue} -->
+
+Honestly, some repetition isn't that big of a deal. The most important thing we need to worry about is making our code *simple* and *readable*, so that whoever is coming along after us can easily understand what's going and make changes without breaking everything. This is easier said than done.
 
 Let's do a few things to make our program a little easier to read. Right now, all of the code sits inside the `main` function. This made it easier to write, but the length of our `main` function with all of the styling for every element makes it difficult to see at a glance what we're trying to do with our program.
 
 ### Replacing styles with functions
 
-One thing we can do to improve our program is factor out the style attributes into their own functions. Remember that words can be replaced by their definitions. So instead of putting all of the styling in `main`, we can replace them with functions with definitions equal to our original in-line styling.
+One thing we can do to improve our program is factor out the style attributes into their own functions. Remember that words can be replaced by their definitions. So instead of putting all of the styling in `main`, we can replace them with functions with definitions that equal our original in-line styling.
 
 Let's create a new function called `pageStyling`, and define it to be equal to the HTML style attributes we used in our `div` container.
 {: .info}
@@ -49,6 +51,8 @@ Html.div
   [ pageStyling ]
   {- other page elements -}
 {% endhighlight %}
+
+By the way, the line with `{- -}` is a comment. The Elm compiler ignores comments when the code is run.
 
 ### Repeating the process
 
@@ -75,8 +79,8 @@ buttonStyling =
       ("border", "1px solid #99ddff"),
       ("color", "white"),
       ("font-size", "1.5em"),
-      ("cursor", "pointer"),
-      ("margin", "5px")
+      ("margin", "5px"),
+      ("cursor", "pointer")
     ]
 
 imageStyling =
@@ -111,7 +115,6 @@ main = Html.div
   [ pageStyling ]
   [
     Html.h1 [ headingStyling ] [ Html.text "cats" ],
-    Html.input [ searchboxStyling ] [],
     Html.br [] [],
     Html.br [] [],
     Html.button [ buttonStyling ] [ Html.text "cats" ],
@@ -125,4 +128,4 @@ main = Html.div
 *(style definitions)*
 {% endhighlight %}
 
-Much cleaner! Now we can just read the code and understand what's happening without having to worry about the details about how every individual element on the page is styled.
+Much cleaner! Now, if we know a little Elm, we can just read the code and understand what's happening without having to worry about the details about how every individual element on the page is styled.

@@ -7,6 +7,8 @@ section: elm
 
 ### Functions
 
+English has different types of words, like nouns and verbs. Programming has different types of words, too.
+
 One of the most common types of words we use in coding is called a **function**.
 
 We use functions to ask the computer to *give us something*.
@@ -25,7 +27,7 @@ Functions work the same way. We ask the computer to give us something, and we an
 
 ### I/O
 
-We call the information that the function needs the **inputs** to the function, and what it gives us back is called the **output**.
+We call the information that the function needs the **inputs**, **arguments**, or **parameters** to the function, and what it gives us back is called the **output**. Input, argument, and parameter are all synonymous.[^1]
 
 So how do we use a function? It's easy. All we have to do is get its attention. And we get a function's attention the same way we get anyone's attention: by **calling its name**.
 
@@ -34,9 +36,23 @@ So how do we use a function? It's easy. All we have to do is get its attention. 
 Remember the code we just wrote?
 
 {% highlight elm %}
-console.log("Sucking at something is the first step towards being sorta good at something.")
+import Html
+
+main = Html.text "Sucking at something is the first step towards being sorta good at something."
 {% endhighlight %}
 
-`console.log` is a function that takes one input: a string of text to show on the screen. Our browsers run the `console.log` function with the text we give it, and then takes the output of the function and
+`Html.text` is a function that takes one input: a string of text to show on the screen. When we give a function an input, we call the combination a **functional expression**. Elm takes the output of this functional expression and automatically shows it on the screen.
 
-What's important to know is that *functions give us something*, and *we call a function by saying its name*.
+### In short
+
+Remember:
+  * functions always give us something, and
+  * we tell the computer to run a function by calling its name and giving it an input
+
+[1]: Technically, "parameter" and "argument" are not *necessarily* the same. Say you have a function:
+{% highlight elm %}
+add num1 num2 = num1 + num2
+
+main = Html.text <| toString <| add 3 4
+{% endhighlight %}
+You would say "the arguments to the function add are '3' and '4'", or "the actual parameters to add are '3' and '4'." That's what actually goes into the function when you call it. On the other hand, you would say, "the formally bound parameters in the add function are num1 and num2", because they're what the function is defined to use. The function, when called, takes the *actual* parameters and *binds* the formal parameter names to those values.
