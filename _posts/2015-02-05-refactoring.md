@@ -24,12 +24,12 @@ There are a few main things we look for when refactoring, roughly in order of im
 
   1. **Complex code.** "Complex" literally means "built from many interconnected parts". We should try to think of our code as built from Legos that can be mixed and matched. Elm helps us out with this naturally.
   2. **Hard to read code**, like unhelpful variable names. We should be able to read our code without having to constantly look up the definitions of functions.
-  3. **Horribly inefficient code**, though this takes some practice to be able to spot. It's better to have poor performance than to waste time optimizing something that doesn't need to be optimized. We'll get to algorithms that improve code performance in later lessons.
+  3. **Horribly inefficient code**, though this takes some practice to be able to spot. It's better to have poor performance than to waste time optimizing something that doesn't need to be optimized.
   4. **Repetition**. Finding repetition means we should *consider* replacing it with a function, since it sets someone up to forget changing one of the occurrences if they want to modify our code in the future.
 
 <!-- {: .quote-text .blue} -->
 
-Honestly, some repetition isn't that big of a deal. The most important thing we need to worry about is making our code *simple* and *readable*, so that whoever is coming along after us can easily understand what's going and make changes without breaking everything. This is easier said than done.
+Honestly, in my opinion, some repetition isn't that big of a deal. The most important thing we need to worry about is making our code *simple* and *readable*, so that whoever is coming along after us can easily understand what's going and make changes without breaking everything. This is easier said than done.
 
 Let's do a few things to make our program a little easier to read. Right now, all of the code sits inside the `main` function. This made it easier to write, but the length of our `main` function with all of the styling for every element makes it difficult to see at a glance what we're trying to do with our program.
 

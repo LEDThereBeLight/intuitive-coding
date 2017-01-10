@@ -7,7 +7,7 @@ section: app-building
 
 ### Keeping track of things with *state*
 
-Our simple program works great, but there are some things we can clean up and in the process teach ourselves some new ideas. These concepts are critical to any sort of data science, artificial intelligence programs, or problems that you'd be asked to solve in an interview.
+Our simple program works great, but there are some things we can clean up and in the process teach ourselves some important ideas. These concepts are critical to any sort of data science, artificial intelligence programs, or problems that you'd be asked to solve in an interview.
 
 Let's go top to bottom and refactor. We'll start with the model.
 
@@ -48,7 +48,7 @@ Remember the `.` symbol that we use with modules and functions? It means "look i
 view model = Html.div
   [ pageStyling ]
   [
-    Html.h1 [ headingStyling ] [ model.title ],
+    Html.h1 [ headingStyling ] [ Html.text model.title ],
     {- ...rest of Html functions... -}
     Html.img [ imageStyling, Html.Attributes.src model.picture ] []
   ]
@@ -76,8 +76,8 @@ It's kind of a pain to see the image location URL everywhere we use the model. L
 
 {% highlight elm %}
 catPicture = "https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif"
-dogPicture = "https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif"
-iceCreamPicture = "https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif"
+dogPicture = "https://media.giphy.com/media/oJWx7MtpR2qdi/giphy.gif"
+iceCreamPicture = "https://media.giphy.com/media/QjagU0ONoQwCc/giphy.gif"
 {% endhighlight %}
 
 Go ahead and replace the URLs with the new functions in our code.
@@ -204,8 +204,7 @@ Let's also change the `view` to use our new messages:
 view model = Html.div
   [ pageStyling ]
   [
-    Html.h1 [ headingStyling ] [ model.title ],
-    Html.input [ searchboxStyling ] [],
+    Html.h1 [ headingStyling ] [ Html.text model.title ],
     Html.br [] [],
     Html.br [] [],
     Html.button [ buttonStyling, Html.Events.onClick AskedForCats ] [ Html.text "cats" ],
@@ -239,6 +238,8 @@ update message model =
 See how in the output of each pattern it looks like we're creating a brand new Record? We're essentially just wanting to give back an updated model, but we're not referencing the old model at all. Even though Elm never changes existing values, it would look clearer to people reading our code if we mentioned the fact that we're essentially just trying to update the existing model with new values.
 
 We can accomplish this with **record update** syntax. It's not *really* updating the record, it's making a new one, but it helps with understanding what we're trying to do. The record update syntax uses the `.` symbol to look inside the original Record and "update" it.
+
+<!-- // Need to talk about how it also makes the code more efficient because it reuses the parts that are the same  -->
 
 {% highlight elm %}
 update message model =
@@ -278,7 +279,6 @@ view model = Html.div
   [ pageStyling ]
   [
     Html.h1 [ headingStyling ] [ Html.text "cats" ],
-    Html.input [ searchboxStyling ] [],
     Html.br [] [],
     Html.br [] [],
     Html.button [ buttonStyling, Html.Events.onClick AskedForCats ] [ Html.text "cats" ],
@@ -286,7 +286,7 @@ view model = Html.div
     Html.button [ buttonStyling, Html.Events.onClick AskedForIceCream ] [ Html.text "ice cream" ],
     Html.br [] [],
     Html.br [] [],
-    Html.img [ imageStyling, Html.Attributes.src "https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif" ] []
+    Html.img [ imageStyling, Html.Attributes.src model.picture ] []
   ]
 {% endhighlight %}
 
@@ -305,7 +305,7 @@ view model = div
     button [ buttonStyling, onClick AskedForIceCream ] [ text "ice cream" ],
     br [] [],
     br [] [],
-    img [ imageStyling, src "https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif" ] []
+    img [ imageStyling, src model.picture ] []
   ]
 {% endhighlight %}
 
@@ -339,6 +339,79 @@ The `(..)` looks a little weird the first time you see it. It's basically just s
 
 One more point. In larger applications, exposing everything usually isn't a good idea because you can run into naming conflicts - what happens if two functions from different modules have the same name? But with small programs like this, it's usually easier to just expose everything and not have to worry about updating your `import` statements every time you use a new function.
 
+Here's the final code we end up with.
 
+{% highlight elm %}
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
+
+main = Html.beginnerProgram { model = model,
+                              view = view,
+                              update = update }
+
+type Message = AskedForCats | AskedForDogs | AskedForIceCream
+
+catPicture = "https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif"
+dogPicture = "https://media.giphy.com/media/oJWx7MtpR2qdi/giphy.gif"
+iceCreamPicture = "https://media.giphy.com/media/QjagU0ONoQwCc/giphy.gif"
+
+model = { title = "cats",
+          picture = "https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif" }
+
+view model = div
+  [ pageStyling ]
+  [
+    h1 [ headingStyling ] [ text model.title ],
+    br [] [],
+    br [] [],
+    button [ buttonStyling, onClick AskedForCats ] [ text "cats" ],
+    button [ buttonStyling, onClick AskedForDogs ] [ text "dogs" ],
+    button [ buttonStyling, onClick AskedForIceCream ] [ text "ice cream" ],
+    br [] [],
+    br [] [],
+    img [ imageStyling, src model.picture ] []
+  ]
+
+update message model =
+  case message of
+    AskedForCats     -> { title = "cats",
+                          picture = catPicture }
+
+    AskedForDogs     -> { title = "dogs",
+                          picture = dogPicture }
+
+    AskedForIceCream -> { title = "ice cream",
+                          picture = iceCreamPicture }
+
+pageStyling =
+    style [ ( "text-align", "center" ) ]
+
+
+headingStyling =
+    style [ ( "font-size", "2em" ), ( "color", "#333" ) ]
+
+
+buttonStyling =
+    style
+        [ ( "padding", "10px" )
+        , ( "background-color", "#99ddff" )
+        , ( "border-radius", "2px" )
+        , ( "border", "1px solid #99ddff" )
+        , ( "color", "white" )
+        , ( "font-size", "1.5em" )
+        , ( "cursor", "pointer" )
+        , ( "margin", "5px")
+        ]
+
+
+imageStyling =
+    style
+        [ ( "border-radius", "2px" )
+        , ( "box-shadow"
+          , "0 2px 4px rgba(0,0,0,0.12), 0 2px 3px rgba(0,0,0,0.24)"
+          )
+        ]
+{% endhighlight %}
 
 <!-- redefining model using the Model type constructor -->

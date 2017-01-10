@@ -20,4 +20,4 @@ Some words are grouped together to create one meaning. The words "double" and "e
 
 Other words have meanings all by themselves - they don't really go with any other word.
 
-We call each grouping of words that creates a meaning an **expression**.
+We call each grouping of one or more words that creates a meaning an **expression**.

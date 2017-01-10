@@ -9,7 +9,7 @@ section: app-building
 
 In the last section, we talked about the update and how it accepts this vague idea of a *message* to know what to change in the model. But what is a message, and where do they come from?
 
-The secret is that we haven't gotten the whole story about the view. The view isn't simply a static page that takes orders from the model about what to show. The view is what the user interacts with, so it's in a great position to listen for changes. We need to set up the view to actively listen for changes that the user triggers on the page.
+The secret is that we haven't gotten the whole story about the view. The view isn't simply a static page that takes orders from the model about what to show. The view is what the user interacts with, so it's in a great position to listen for changes. We need to set up the view to actively listen for events that the user triggers on the page.
 
 Here's the code from our view again.
 
@@ -18,7 +18,6 @@ view model = Html.div
   [ pageStyling ]
   [
     Html.h1 [ headingStyling ] [ Html.text "cats" ],
-    Html.input [ searchboxStyling ] [],
     Html.br [] [],
     Html.br [] [],
     Html.button [ buttonStyling ] [ Html.text "cats" ],
@@ -30,7 +29,7 @@ view model = Html.div
   ]
 {% endhighlight %}
 
-To bring our view to life, we need to import another module: `Html.Events`. This module is full of functions that produce messages when certain things happen, which will feed into our update function once we wire everything together.
+To bring our view to life, we need to import another module: `Html.Events`. This module is full of functions that produce "events" when certain things happen, which will feed into our update function once we wire everything together.
 
 First, add an import line near the top of the file (the order of imports doesn't matter):
 {% highlight elm %}
@@ -102,7 +101,9 @@ import Html
 import Html.Attributes
 import Html.Events
 
-main = Html.beginnerApp
+main = Html.beginnerProgram { model = model,
+                              view = view,
+                              update = update }
 
 view model = Html.div
   [ pageStyling ]

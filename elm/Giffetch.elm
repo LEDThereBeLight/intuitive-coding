@@ -23,9 +23,9 @@ type alias Model =
     }
 
 
-searchFor : String -> ( Model, Cmd Message )
-searchFor topic =
-    ( Model topic "" "", getRandomGif topic )
+init : String -> ( Model, Cmd Message )
+init =
+    ( Model "" "" "", getRandomGif topic )
 
 
 type Message

@@ -89,6 +89,37 @@ There's an image element on our page, but we haven't told Elm the address for wh
 
 The Elm Html module only has functions for HTML elements. To add an HTML attribute, we need to import another module, appropriately named `Html.Attributes`.
 
+### Where is Html.Attributes?
+
+Even though it's two words, `Html.Attributes` is just one module. It's just saved in Elm inside a folder called "Html", so we use the `.` to access it. Honestly, this isn't important to understand, but Elm stores its modules in a file structure like this:
+
+<ul class="files">
+  <li>
+    <i class="fa fa-folder-o"></i>
+    elm_modules
+    <ul>
+      <li>
+        <i class="fa fa-file-code-o"></i>
+        Html (the module we've already imported)
+      </li>
+      <li>
+        <i class="fa fa-folder-o"></i>
+        Html
+        <ul>
+          <li>
+            <i class="fa fa-file-code-o"></i>
+            Attributes (our new module)
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+The point is that `Html.Attributes` is really just one module. It's good enough just to remember that whenever we use it, we have to use its full name of `Html.Attributes`.
+
+### Importing Html.Attributes
+
 Import the Html.Attributes module, then add a `src` with a URL to the first input of the `img` element.
 {: .info}
 

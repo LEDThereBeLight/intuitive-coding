@@ -24,6 +24,8 @@ The second sentence is a special kind of expression, because it has that `=` sym
 The whole line says to create a new word called `main` and define it to be the functional expression
 `Html.text "Sucking at something is the first step towards being sorta good at something."` In programming, whenever we make a new word we call it a **variable**, because the definition varies depending on how we write our program.
 
+In Elm, every variable is a function, and every variable value has a type. We are not able to define anything else.
+
 ### Defining words
 
 We use the `=` symbol to make new words. When the Elm compiler sees the `=` symbol, it looks for two things:
