@@ -76,23 +76,23 @@
       </ol>
     </article>
 
-    <!-- <article class="toc-section toc-section--css3">
+    <article class="toc-section toc-section--css3">
       <div class="toc-heading">
-        <i class="fa fa-css3"></i>
+        <i class="fa fa-usd"></i>
         <h3>
-          <a href="/css-basics.html">CSS 3</a>
+          <a href="/css-basics.html">Solving problems</a>
         </h3>
         <small>
           <span>29</span> lessons
         </small>
         <em>
-          For <strong>developers</strong> eager to learn how CSS can define the style and layout of a webpage
+          For coders</strong> who know some of the lingo
         </em>
       </div>
       <ol class="toc-content">
         {% for post in site.posts reversed %}
           {% capture currentsection %}{{ post.section }}{% endcapture %}
-          {% if currentsection == "css" %}
+          {% if currentsection == "solving-problems" %}
             {% capture currentmonth %}{{ post.date | date: "%m" }}{% endcapture %}
             {% if currentmonth != month %}
               <li class="toc-month">
@@ -112,7 +112,7 @@
           {% endif %}
         {% endfor %}
       </ol>
-    </article> -->
+    </article>
 
     <!-- <article class="toc-section toc-section--sass">
       <div class="toc-heading">
@@ -150,6 +150,6 @@
           {% endif %}
         {% endfor %}
       </ol>
-    </article> -->
+    </article>-->
   </div>
 </section>

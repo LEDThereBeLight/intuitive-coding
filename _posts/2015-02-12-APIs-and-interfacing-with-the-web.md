@@ -5,6 +5,8 @@ subtitle: "Integrating the internet into our app"
 section: app-building
 ---
 
+### In progress section. The rough outline is here for you to read if you're interested, otherwise it will be cleaned up and explained better soon.
+
 ### Pulling GIFs from the web
 
 It's finally time to extend our app to pull in images from the web, rather than just showing the GIFs we hardcoded into the page. We'll add a search bar for the user to choose a category of picture which will be fetched from the Giphy API and shown on the page.
@@ -361,6 +363,8 @@ When you click send, you'll get a *response* that looks something like this:
 
 ![401](images/postman-401.png)
 
+The response is in [JSON](https://developer.mozilla.org/en-US/docs/Glossary/JSON) format, which is a data format modeled off of Javascript's object notation. JSON is an alternative to XML, if you've ever worked with that.
+
 See the "status: 401"? Anytime someone makes a request to a web server, the server sends back a **status code** that says whether the request passed or failed.
 
 You've undoubtedly seen status code 404 before.
@@ -471,14 +475,272 @@ Now, the response looks different.
 
 We get back a bunch of information, more than we want. We'll need to write code to **parse** the response, or pull out the image URL from it so that we can display it on our page.
 
+The only piece of information we need is the `image_url`, which is nested in the JSON response like this:
+
+<ul class="files">
+  <li>
+    <i class="fa fa-folder-o"></i>
+    data
+    <ul>
+      <li>
+        <i class="fa fa-file-code-o"></i>
+        image_url
+      </li>
+    </ul>
+  </li>
+</ul>
+
+We need a way to access the nested information, and we can do that with Elm **decoders**.
+
 ### Parsing with decoders
 
-Parsing data with Elm can be a complex topic, but we'll keep it simple for now. There's a whole module named [Json.Decode](http://package.elm-lang.org/packages/elm-lang/core/latest/Json-Decode) made for decoding text data in the JSON format and putting it into structures that we can use in our code.
+There's a whole module named [Json.Decode](http://package.elm-lang.org/packages/elm-lang/core/latest/Json-Decode) made for decoding text data in the JSON format and putting it into structures that we can use in our code.
+
+We need to import the `Json.Decode` module first at the top of our file.
+
+{% highlight elm %}
+import Json.Decode as Decode
+{% endhighlight %}
+
+With this `import` statement, we're adding in one more concept. In addition to being able to expose modules to be used without any module prefix, we can also choose to use a module prefix, but with a different name. In this case, we're going to use Json.Decode functions `as` Decode, so we can write `Decode.function` instead of `Json.Decode.function`. This is standard practice in Elm development.
+
+We could spend all day talking about JSON decoders (and we probably will at some point), but for now, we'll just use the simple [`Json.Decode.at` function](http://package.elm-lang.org/packages/elm-lang/core/latest/Json-Decode#at) to pull out the information.
+
+If you need to use decoders for more complicated tasks, the best introduction to Elm decoders I've found is at [egghead.io](https://egghead.io/lessons/elm-decode-a-list-of-numbers-from-a-json-string-in-elm).
+
+The type signature for `at` looks like this:
+
+{% highlight elm %}
+Json.Decode.at : List String -> Decoder a -> Decoder a
+{% endhighlight %}
+
+It takes in a List of Strings that represent the location of our data, and a Decoder of any type, and gives back a new decoder of that same type. We'll then **use** this new decoder in our code on the response to pull out our `image_url`.
+
+Let's make a decoder with the `Json.Decode.at` function.
+
+{% highlight elm %}
+-- decodeGifUrl is a decoder that gives back a String
+decodeGifUrl : Decode.Decoder String
+decodeGifUrl =
+    Decode.at [ "data", "image_url" ] Decode.string
+{% endhighlight %}
+
+Here we're giving `Decode.at` a list of Strings to search "inside" for our data, and a String Decoder through Decode.string.
+
+### GETting the image
+
+Now that we have a Decoder that we can use to get the image URL from the JSON response, let's make a function that will fetch the image from Giphy.
+
+Making a request from a web server is an action, so we'll need to make a command.
+
+{% highlight elm %}
+getRandomGif : String -> Cmd Message
+getRandomGif topic =
+    let
+        url =
+            "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag="
+                ++ topic
+    in
+        Http.send NewGifReceived (Http.get url decodeGifUrl)
+{% endhighlight %}
+
+`getRandomGif` is a function that takes a String (a topic) and gives back a Cmd. Here we're using `++`, a function that joins two Strings together, and a `let in` statement, which lets us declare a variable and use it in our function. We're declaring the `url` variable and using it in the `in` section.
+
+`Http` is a module that makes requests to web servers. We need to import it into our code.
+
+{% highlight elm %}
+import Http
+{% endhighlight %}
+
+[`Http.send`](http://package.elm-lang.org/packages/elm-lang/http/1.0.0/Http#send) is a function that takes a Message to run when it's done as its first input and an Http Request as its second input.
+
+We also need to add this new Message type.
+
+{% highlight elm %}
+type Message
+    = AskedForNewPic
+    | SearchTextChanged String
+    | NewGifReceived (Result Http.Error String)
+{% endhighlight %}
+
+In this case, `NewGifReceived` is *parameterized* with a Result, which can either fail (in which case we get an Http.Error type), or succeed, in which case we get a String that contains the GIF URL.
+
+We also need to handle the new Message in the `update` function.
+
+{% highlight elm %}
+update : Message -> Model -> ( Model, Cmd Message )
+update message model =
+    case message of
+        SearchTextChanged newText ->
+            ( { model | searchText = newText }, Cmd.none )
+
+        AskedForNewPic ->
+            if String.length model.searchText < 1 then
+                ( model, getRandomGif model.topic )
+            else
+                ( { model
+                    | searchText = ""
+                    , topic = model.searchText
+                  }
+                , getRandomGif model.searchText
+                )
+
+        NewGifReceived (Ok newImageUrl) ->
+            ( Model model.topic newImageUrl "", Cmd.none )
+
+        NewGifReceived (Err _ ) ->
+            ( model, Cmd.none )
+{% endhighlight %}
+
+We also added a user experience fix to reset the search bar whenever a search is made.
+
+Here's the final code:
+
+{% highlight elm %}
+module Main exposing (..)
+
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
+import Http
+import Json.Decode as Decode
 
 
-Enter the API endpoint into the request URL field.
+main =
+    Html.program
+        { init = searchFor "cats"
+        , view = view
+        , update = update
+        , subscriptions = subscriptions
+        }
 
-Make sure the request type is set to "GET", then send the request. You'll see the response information below. The response is in [JSON](https://developer.mozilla.org/en-US/docs/Glossary/JSON) format, which is a data format modeled off of Javascript's object notation.
+
+type alias Model =
+    { topic : String
+    , gifUrl : String
+    , searchText : String
+    }
 
 
-Let's define the getRandomGif function. It will take a String as input, which again, is just the text in the input box.
+init : String -> ( Model, Cmd Message )
+init = ( Model "" "" "", getRandomGif topic )
+
+
+type Message
+    = AskedForNewPic
+    | SearchTextChanged String
+    | NewGifReceived (Result Http.Error String)
+
+
+update : Message -> Model -> ( Model, Cmd Message )
+update message model =
+    case message of
+        SearchTextChanged newText ->
+            ( { model | searchText = newText }, Cmd.none )
+
+        AskedForNewPic ->
+            if String.length model.searchText < 1 then
+                ( model, getRandomGif model.topic )
+            else
+                ( { model
+                    | searchText = ""
+                    , topic = model.searchText
+                  }
+                , getRandomGif model.searchText
+                )
+
+        NewGifReceived (Ok newImageUrl) ->
+            ( Model model.topic newImageUrl "", Cmd.none )
+
+        NewGifReceived (Err _ ) ->
+            ( model, Cmd.none )
+
+
+view : Model -> Html Message
+view model =
+    div [ pageStyle ]
+        [ h2 [ titleStyle ]
+            [ text model.topic ]
+        , input
+            [ inputStyle
+            , value model.searchText
+            , onInput SearchTextChanged
+            , placeholder "search"
+            ]
+            []
+        , br [] []
+        , br [] []
+        , button [ buttonStyle, onClick AskedForNewPic ]
+            [ text "more please!" ]
+        , br [] []
+        , br [] []
+        , img [ imgStyle, src model.gifUrl ] []
+        ]
+
+
+subscriptions : Model -> Sub Message
+subscriptions model =
+    Sub.none
+
+
+getRandomGif : String -> Cmd Message
+getRandomGif topic =
+    let
+        url =
+            "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag="
+                ++ topic
+    in
+        Http.send NewGifReceived (Http.get url decodeGifUrl)
+
+
+decodeGifUrl : Decode.Decoder String
+decodeGifUrl =
+    Decode.at [ "data", "image_url" ] Decode.string
+
+
+
+-- Styles
+
+
+pageStyle =
+    style [ ( "text-align", "center" ) ]
+
+
+inputStyle =
+    style
+        [ ( "padding-top", "16px" )
+        , ( "padding-bottom", "6px" )
+        , ( "width", "188px" )
+        , ( "outline", "none" )
+        , ( "color", "#000" )
+        , ( "font-size", "16px" )
+        , ( "font-weight", "400" )
+        , ( "border", "none" )
+        , ( "border-bottom", "2px solid #99ddff" )
+        ]
+
+
+titleStyle =
+    style [ ( "font-size", "2em" ), ( "color", "#333" ) ]
+
+
+buttonStyle =
+    style
+        [ ( "padding", "10px" )
+        , ( "background-color", "#99ddff" )
+        , ( "border-radius", "2px" )
+        , ( "border", "1px solid #99ddff" )
+        , ( "color", "white" )
+        , ( "font-size", "1.5em" )
+        , ( "cursor", "pointer" )
+        ]
+
+
+imgStyle =
+    style
+        [ ( "border-radius", "2px" )
+        , ( "box-shadow"
+          , "0 2px 4px rgba(0,0,0,0.12), 0 2px 3px rgba(0,0,0,0.24)"
+          )
+        ]
+{% endhighlight %}
