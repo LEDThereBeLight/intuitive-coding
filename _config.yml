@@ -1,7 +1,8 @@
-name: MarkSheet
-description: A free tutorial to learn HTML and CSS
+name: Intuitive Coding
+description: learn to code. change the world.
 markdown: kramdown
 kramdown:
   input: GFM
 exclude: ['images/original']
 permalink: :title.html
+highlighter: pygments

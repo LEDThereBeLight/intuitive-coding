@@ -3,9 +3,9 @@
   margin: 0 auto
   max-width: 960px
   position: relative
-  +from(1100px)
-    max-width: 1080px
   +from(1200px)
+    max-width: 1080px
+  +from(1400px)
     max-width: 1140px
 
 .banner
@@ -56,7 +56,7 @@
     +replace(url("/images/marksheet-hello.png"), 420px, 384px)
 
 .logo
-  +replace(url("/images/marksheet-logo.png"), 230px, 48px)
+  //+replace(url("/images/marksheet-logo.png"), 230px, 48px)
   float: left
   left: 10px
   position: absolute
@@ -113,21 +113,25 @@
   height: 40px
   text-shadow: 0 1px 0 white
   will-change: scroll-position
-
   &.affix
+    position: fixed !important
+  &.affix-bottom
+    position: absolute !important
+  &.affix,
+  &.affix-bottom
     box-shadow: 0 3px 5px rgba(black, .1), 0 1px 0 rgba(black, .1)
-    position: fixed
     top: 0
     width: 100%
     +desktop
       width: 960px
-    +from(1100px)
-      width: 1080px
     +from(1200px)
+      width: 1080px
+    +from(1400px)
       width: 1140px
   +desktop
     border-radius: 3px 3px 0 0
-    &.affix
+    &.affix,
+    &.affix-bottom
       border-radius: 0
 
 
@@ -281,8 +285,8 @@
   text-align: center
   +desktop
     bottom: 0
+    left: 0
     position: fixed
-    right: 0
     .fa
       left: 50%
       margin-left: -12px
@@ -314,12 +318,14 @@
     padding: 60px
   a
     text-decoration: underline
+  // for in-line code blocks
   code
-    background-color: #222
+    background-color: rgba(#eee, 0.2)
     border-radius: 3px
-    color: #66d9ef
+    // color: #66d9ef
+    // border-bottom: 2px solid $blue
     font-size: $small
-    padding: 3px 5px 3px
+    padding: 1px 5px 3px
     position: relative
     top: -1px
   & > dl
@@ -378,17 +384,32 @@
         a
           top: -5px
   h4
-    color: $text
+    border-bottom: 1px solid $border
+    color: $strong
     font-size: 20px
     font-weight: 700
     line-height: 1
-    margin: 30px 0 15px
+    margin: 30px 0
+    padding-bottom: 15px
   p
     margin: 1em 0
     &:first-child
       margin-top: 0
     &:last-child
       margin-bottom: 0
+    img
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+      border-radius: 2px
+      display: inherit
+      margin: auto
+    img + em
+      display: inline-block
+      width: 100%
+      text-align: center
+  p.answer img
+    text-align: left
+    margin: 0
+    box-shadow: none
   pre
     line-height: 1.25
     position: relative
@@ -425,7 +446,33 @@
           width: 20%
   figure.highlight
     margin: 30px -30px
-    overflow: auto
+    pre
+      white-space: pre-wrap
+      abbr, acronym
+        border-bottom: .1em dashed
+        border-color: #60B5CC
+        cursor: help
+        position: relative
+      abbr:hover::after
+        background: #1496bb
+        opacity: 1 !important
+        overflow-x: visible
+        display: inline-block
+        white-space: nowrap
+        border-radius: 2px
+        color: #fff
+        pointer-events: none
+        padding: 10px
+        position: absolute
+        left: 0
+        margin-left: auto
+        margin-right: auto
+        bottom: 100%
+        font-size: 1em
+        line-height: 1em
+        content: attr(title)
+        min-width: 100px
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28)
     pre code
       +label
       background: inherit
@@ -437,6 +484,8 @@
         +label("HTML", $html5, white)
       &.language-css
         +label("CSS", $css3, white)
+      &.language-elm
+        +label("Elm", $web, white)
       &.language-scss
         +label("SCSS", $sass, white)
         &.language-css
@@ -448,14 +497,45 @@
   .answer,
   .important,
   .info
+    border-radius: 2px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     background: rgba($blue, 0.1)
     border-left: 0.25em solid $blue
     color: rgba(black, 0.5)
-    font-size: $small
-    padding: 15px
+    padding: 15px 20px
     +desktop
-      padding: 30px
+      padding: 25px 30px
+  .quote
+    border-radius: 2px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    background: rgba($pink, 0.1)
+    border-left: 0.25em solid $pink
+    color: rgba(#333, .8)
+    padding: 20px 20px 15px 50px
+    position: relative
+  .quote::before
+    content: "\201C"
+    font-family: Georgia, serif
+    font-size: 60px
+    font-weight: bold
+    color: $pink
+    position: absolute
+    left: 10px
+    top: 0px
+  .quote-text
+    background: transparent
+    font-family: inherit
+    font-size: inherit
+    border-bottom: 2px solid $pink
+    padding-bottom: 3px
+    color: rgba(#333, .8)
+    &.red
+      border-bottom: 2px solid $pink
+    &.blue
+      border-bottom: 2px solid $blue
   .answer
+    border-radius: 2px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     background: rgba($green, 0.1)
     border-left-color: $green
     .question
@@ -465,9 +545,13 @@
       + br
         display: none
   .important
+    border-radius: 2px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     background: rgba($red, 0.1)
     border-left-color: $red
   .result
+    border-radius: 2px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     +label("Result")
     border: 1px solid $yellow
     color: black
@@ -520,20 +604,103 @@
     margin-top: 1em
     padding: 1em 1em 0
 
+#text-editor-wrap
+  margin: auto
+  max-width: 530px
+  border-radius: 10px
+  box-shadow: rgba(0,0,0,0.8) 0px 20px 50px
+  transition: all 0.5s ease-out
+  #title-bar
+    text-align: center
+    padding: 5px 0
+    height: 30px
+    line-height: 20px
+    font-family: "Lucida Grande"
+    font-size: 1em
+    text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px
+    background-color: #f8f8f8
+    background: linear-gradient(#e8e8e8, #bcbbbc)
+    box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px
+    border-top-left-radius: inherit
+    border-top-right-radius: inherit
+    border-bottom: #6a6a6a 1px solid
+  #text-body
+    height: 200px
+    background-color: rgba(0,0,0,0.8)
+    padding: 10px
+    color: #f0f0f0
+    text-shadow: #000 0px 1px 0px
+    font-family: "Consolas"
+    font-size: 1.75em
+    line-height: 1.4em
+    font-weight: 500
+    text-align: left
+    overflow: auto
+    word-wrap: break-word
+    border-bottom-left-radius: inherit
+    border-bottom-right-radius: inherit
+
+
+.typed-cursor
+  opacity: 1
+  -webkit-animation: blink 2s infinite
+  -moz-animation: blink 2s infinite
+  animation: blink 2s infinite
+
+@keyframes blink
+  0%
+    opacity: 1
+  50%
+    opacity: 0
+  100%
+    opacity: 1
+
+@-webkit-keyframes blink
+  0%
+    opacity: 1
+  50%
+    opacity: 0
+  100%
+    opacity: 1
+
+@-moz-keyframes blink
+  0%
+    opacity: 1
+  50%
+    opacity: 0
+  100%
+    opacity: 1
+//
+// .typed-cursor
+//   opacity: 1
+//   -webkit-animation: blink 1s infinite
+//   -moz-animation: blink 1s infinite
+//   animation: blink 1s infinite
+// @keyframes: blink {
+//   0% { opacity:1; }
+//   50% { opacity:0; }
+//   100% { opacity:1; }
+// }
+// @-webkit-keyframes: blink{
+//   0% { opacity:1; }
+//   50% { opacity:0; }
+//   100% { opacity:1; }
+// }
+// @-moz-keyframes: blink{
+//   0% { opacity:1; }
+//   50% { opacity:0; }
+//   100% { opacity:1; }
+// }
+
+
 $carbon-space: 15px
 
 #carbon
   background: white
   border-radius: 5px
   box-shadow: 0 10px 20px rgba(black, .2)
-  margin-left: auto
-  margin-right: auto
-  max-width: 340px
-  min-height: 100px + ($carbon-space * 2)
-  min-width: 300px
+  font-size: 14px
   padding: $carbon-space
-  +from(400px)
-    width: 340px
 
 #carbonads
   text-align: left
@@ -543,7 +710,7 @@ $carbon-space: 15px
   span
     display: block
   .carbon-img
-    float: left
+    display: block
     height: 100px
     width: 130px
     img
@@ -552,7 +719,30 @@ $carbon-space: 15px
     display: block
     color: $strong
     margin-bottom: 5px
-    margin-left: 130px + $carbon-space
   .carbon-poweredby
     font-size: $small
-    margin-left: $carbon-space
+
++until(1099px)
+  #carbon
+    margin-left: auto
+    margin-right: auto
+    max-width: 340px
+    min-height: 100px + ($carbon-space * 2)
+    min-width: 300px
+  #carbonads
+    .carbon-img
+      float: left
+    .carbon-text
+      margin-left: 130px + $carbon-space
+    .carbon-poweredby
+      margin-left: $carbon-space
+
++from(1100px)
+  #carbon
+    bottom: 15px
+    position: fixed
+    right: 15px
+    width: 160px
+  #carbonads
+    .carbon-img
+      margin-bottom: 10px

@@ -11,14 +11,13 @@ route: post
         {{ page.title }}
       </h1>
       <h2>{{ page.subtitle }}</h2>
-      {% include carbon.html %}
     </div>
   </section>
 
   <div class="page-content">
     <div class="container">
       <div class="breadcrumb-holder">
-        <header id="breadcrumb" class="breadcrumb" data-spy="affix">
+        <header id="breadcrumb" class="breadcrumb">
           <a id="open" class="breadcrumb-toggle">
             <span></span>
             <span></span>
@@ -27,14 +26,12 @@ route: post
 
           <span class="breadcrumb-section">
             {% case page.section %}
-            {% when "web" %}
-              <i class="fa fa-globe"></i>
-            {% when "html" %}
-              <i class="fa fa-html5"></i>
-            {% when "css" %}
-              <i class="fa fa-css3"></i>
-            {% when "sass" %}
-              <i class="fa fa-rocket"></i>
+            {% when "elm" %}
+              <i class="fa fa-code"></i>
+            {% when "app-building" %}
+              <i class="fa fa-play-circle"></i>
+            {% when "solving-problems" %}
+              <i class="fa fa-usd"></i>
             {% endcase %}
             {{ page.section }}
           </span>
@@ -58,6 +55,14 @@ route: post
       <nav id="menu" class="menu">
         <ul></ul>
       </nav>
+
+      {% if page.example %}
+      <article class="content">
+        <div id="{{ page.example }}"></div>
+        <script src="javascript/{{ page.example }}.js"></script>
+        <script>Elm.Main.embed(document.querySelector('#{{ page.example }}'))</script>
+      </article>
+      {% endif %}
 
       <article class="content">
         {{ content }}

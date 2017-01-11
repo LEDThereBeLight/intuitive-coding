@@ -25,8 +25,8 @@
   top: 0
   width: 100%
   .container
-    border-bottom: 1px solid rgba(black, .1)
-    box-shadow: 0 1px 0 rgba(white, .1)
+    // border-bottom: 1px solid rgba(black, .1)
+    // box-shadow: 0 1px 0 rgba(white, .1)
     height: $height-header
   .share-buttons
     position: absolute
@@ -38,6 +38,9 @@
   +desktop
     .share-buttons
       right: 0
+  img
+    width: 40px
+    height: 40px
 
 .page-header-icons
   padding: 18px 0
@@ -65,6 +68,7 @@
   padding-top: $height-header
 
 .page-content
+  line-height: 1.6
   .container
     background: white
     +desktop
@@ -165,6 +169,8 @@
   text-shadow: 0 1px 2px rgba(black, .2)
   .container
     padding: 30px
+  .share-buttons
+    margin: 30px 0
   a
     color: $link
     &:hover
@@ -191,18 +197,14 @@
       text-align: center
     p
       margin-top: 1em
-    .share-buttons
-      margin: 30px 0
   +desktop
     .container
       padding: 60px 0
-    .share-buttons
-      position: absolute
-      right: 0
-      top: 60px
     %share-button
-      position: static
-      margin: 0 0 0 18px
+      left: auto
+      margin: 0 20px 0 0
+      position: relative
+      right: auto
 
 .page-overlay
   +overlay
@@ -227,10 +229,10 @@
     right: auto
     position: fixed
     width: 960px
-  +from(1100px)
+  +from(1200px)
     margin-left: -540px
     width: 1080px
-  +from(1200px)
+  +from(1400px)
     margin-left: -570px
     width: 1140px
 
@@ -306,7 +308,8 @@ html.has-menu-open
   margin-top: -40px
   .container
     background-color: rgba(black, .2)
-    background-image: linear-gradient(rgba(black, 0), rgba(black, .2))
+    color: white
+    padding-top: 10px
     border-radius: 3px 3px 0 0
     box-shadow: inset 0 -3px 3px rgba(black, .1), 0 -1px 0 rgba(white, .1)
     height: 40px
@@ -314,7 +317,6 @@ html.has-menu-open
     display: none
 
 .toc-column
-  +replace(url("/images/toc-head.png"), 240px, 40px)
   position: absolute
   top: 0
   width: 80px
@@ -337,14 +339,18 @@ html.has-menu-open
 .toc-component
   position: relative
   .container
+    border-radius: 10px
     background: white
   +desktop
     .container
       box-shadow: 0 20px 40px rgba(black, .2)
+    .container:first-child:first-child
+      border-top-left-radius: 10px
 
 .toc-section
   min-height: 120px
   position: relative
+
 
 .toc-heading
   background: $dark
