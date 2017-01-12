@@ -3,6 +3,7 @@ layout: post
 title: "What is an API?"
 subtitle: "Integrating the internet into our app"
 section: app-building
+comments: true
 ---
 
 ### In progress section. The rough outline is here for you to read if you're interested, otherwise it will be cleaned up and explained better soon.

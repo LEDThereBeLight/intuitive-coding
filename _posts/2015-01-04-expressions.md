@@ -3,6 +3,7 @@ layout: post
 title: "Expressions"
 subtitle: "The <strong>meaning</strong> behind the words"
 section: elm
+comments: true
 ---
 
 ### What did we just do?

@@ -3,6 +3,7 @@ layout: post
 title: "What now?"
 subtitle: "Other places to go"
 section: solving-problems
+comments: true
 ---
 
 ### Where to go from here
@@ -10,17 +11,20 @@ section: solving-problems
 What are you interested in?
 
 Web programming:
+
   * Continue with Elm's [official guide](https://guide.elm-lang.org/install.html)
   * Try an Elm [unofficial tutorial](https://www.elm-tutorial.org/en/)
   * [Learn Javascript](http://eloquentjavascript.net/)
   * Learn [Facebook's React](https://facebook.github.io/react/)
 
 Coding for interviews:
+
   * Learn [computer science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)
   * Learn [data structures and algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/)
   * Do [practice problems](http://codewars.com/)
 
 Artificial Intelligence:
+
   * Learn [the basics](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lecture-videos/)
   * Implement the algorithms
   * Practice [with a game](http://www.screeps.com)

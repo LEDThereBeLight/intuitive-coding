@@ -3,6 +3,7 @@ layout: post
 title: "What is a function, anyway?"
 subtitle: "or asking for cookies"
 section: elm
+comments: true
 ---
 
 ### Functions
