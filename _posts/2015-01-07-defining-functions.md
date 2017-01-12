@@ -3,6 +3,7 @@ layout: post
 title: "Creating new words"
 subtitle: "Making our own language"
 section: elm
+comments: true
 ---
 
 ### Making new words

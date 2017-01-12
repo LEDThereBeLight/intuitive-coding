@@ -3,6 +3,7 @@ layout: post
 title: "Refactoring"
 subtitle: "Easy to read, easy to change"
 section: app-building
+comments: true
 ---
 
 ### Refactoring our code

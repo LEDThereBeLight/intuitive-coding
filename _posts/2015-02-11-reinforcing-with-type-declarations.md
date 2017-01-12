@@ -3,6 +3,7 @@ layout: post
 title: "Let the Types Flow"
 subtitle: "Thinking in Types"
 section: app-building
+comments: true
 ---
 
 ### Why types are a good thing

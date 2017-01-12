@@ -3,6 +3,7 @@ layout: post
 title: "Modules"
 subtitle: "Or how to be as <strong>lazy</strong> as possible"
 section: elm
+comments: true
 ---
 
 ### Getting functions from other places

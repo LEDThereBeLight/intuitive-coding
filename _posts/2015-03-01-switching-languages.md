@@ -3,6 +3,7 @@ layout: post
 title: "What now?"
 subtitle: "Other places to go"
 section: solving-problems
+comments: true
 ---
 
 ### Where to go from here

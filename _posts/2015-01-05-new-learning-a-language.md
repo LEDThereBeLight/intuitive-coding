@@ -3,6 +3,7 @@ layout: post
 title: "Learning a <strong>Language</strong>"
 subtitle: "What exactly is <strong>programming</strong>, anyway?"
 section: elm
+comments: true
 ---
 
 ### Settling for programming languages

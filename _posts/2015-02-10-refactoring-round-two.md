@@ -3,6 +3,7 @@ layout: post
 title: "Refactoring Round Two"
 subtitle: "...and a bunch of new ideas"
 section: app-building
+comments: true
 ---
 
 ### Keeping track of things with *state*

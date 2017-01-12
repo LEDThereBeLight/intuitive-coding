@@ -3,6 +3,7 @@ layout: post
 title: "Hooking Up Our Program"
 subtitle: "The sum is greater than the parts"
 section: app-building
+comments: true
 ---
 
 ### Bringing our view to life

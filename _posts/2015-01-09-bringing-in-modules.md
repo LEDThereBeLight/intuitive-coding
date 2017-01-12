@@ -3,6 +3,7 @@ layout: post
 title: "Imports"
 subtitle: "Using modules in our code"
 section: elm
+comments: true
 ---
 
 ### Importing modules

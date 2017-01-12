@@ -3,6 +3,7 @@ layout: post
 title: "Making Giffetch"
 subtitle: "Starting to build our program"
 section: app-building
+comments: true
 ---
 
 ### Starting our Elm program

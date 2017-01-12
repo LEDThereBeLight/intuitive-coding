@@ -3,6 +3,7 @@ layout: post
 title: "Hello World...?"
 subtitle: "You can't build a reputation on what you're <strong>going</strong> to do"
 section: elm
+comments: true
 ---
 
 ### Our first program
