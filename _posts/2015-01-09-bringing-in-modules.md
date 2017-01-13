@@ -10,7 +10,7 @@ comments: true
 
 Let's finish up with the first line in our code.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 
 main = Html.text "Sucking at something is the first step towards being sorta good at something."

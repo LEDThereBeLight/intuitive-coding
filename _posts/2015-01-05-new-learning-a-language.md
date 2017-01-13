@@ -65,7 +65,7 @@ If our goal is to be productive coders, we should strive to write code that's *d
 
 Just to drive the point home, here is how we would implement the procedure we just walked through in both Elm and Javascript.
 
-{% highlight elm %}
+{% highlight haskell %}
 shoppingList = List "Nutella", "Frozen Pizza", "Ranch Dressing", "Potato Chips (ruffled)"
 cookies = "Chips Ahoy Cookies"
 

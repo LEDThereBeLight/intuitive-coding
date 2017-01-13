@@ -18,13 +18,13 @@ Let's take advantage of Elm's helpful **type declarations** to develop an intuit
 
 Let's see what type declarations look like with an example. Say we wanted to make a function that added two numbers.
 
-{% highlight elm %}
+{% highlight haskell %}
 add first second = first + second
 {% endhighlight %}
 
 In Elm, `+` only works on numbers - that is, an Int type (whole number) or a Float type (decimal). If we wanted to restrict our function to only work on whole numbers, we could do this:
 
-{% highlight elm %}
+{% highlight haskell %}
 add : Int -> Int -> Int
 add first second = first + second
 {% endhighlight %}
@@ -52,7 +52,7 @@ This process of only allowing one input to be processed at a time is extremely p
 
 Currying, or **partial application** as it's more formally known, is a powerful functional programming concept that allows us to save programming time by reusing code. Let's see how our `add` function would work by walking through each of the currying steps.
 
-{% highlight elm %}
+{% highlight haskell %}
 add one two = one + two
 
 -- We can make a function that always adds 2 like this:
@@ -76,7 +76,7 @@ addOne 2 -- produces our final value, an Int of 3
 
 Let's see one more example.
 
-{% highlight elm %}
+{% highlight haskell %}
 multiply x y = x * y
 
 -- multiply 3 7 is the same as...
@@ -92,7 +92,7 @@ In each of these cases, we're supplying a single input to a function and receivi
 
 When we created our `add` function, we said that it could only work on Int values.
 
-{% highlight elm %}
+{% highlight haskell %}
 add : Int -> Int -> Int
 add one two = one + two
 {% endhighlight %}
@@ -110,7 +110,7 @@ The answer is to use a **type variable** in our type declaration. Just like norm
 
 Here's what using one of these type variables for our `add` function would look like.
 
-{% highlight elm %}
+{% highlight haskell %}
 add : number -> number -> number
 add one two = one + two
 {% endhighlight %}
@@ -121,7 +121,7 @@ Now we won't get an error when we use our function with decimals.
 
 Let's add a type declaration for our `update` function. Remember that `update` is a function that takes a Message and a Model, and gives back a new Model.
 
-{% highlight elm %}
+{% highlight haskell %}
 update : Message -> Model -> Model
 update message model =
   case message of
@@ -141,19 +141,19 @@ Let's go through and add type declarations to some of the other functions in our
 
 We already know the type declaration for the `update` function:
 
-{% highlight elm %}
+{% highlight haskell %}
 update : Message -> Model -> Model
 {% endhighlight %}
 
 But if you run this, it won't work. That's because Model isn't a default type that is built into Elm. We created a Message type when we wrote this line:
 
-{% highlight elm %}
+{% highlight haskell %}
 type Message = AskedForCats | AskedForDogs | AskedForIceCream
 {% endhighlight %}
 
 So now we just have to do something similar for the Model.
 
-{% highlight elm %}
+{% highlight haskell %}
 model = { title = "cats",
           picture = "https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif" }
 {% endhighlight %}
@@ -164,7 +164,7 @@ There's just a slight difference here. Our `model` isn't really a *new* type, it
 
 We make nicknames for types like this:
 
-{% highlight elm %}
+{% highlight haskell %}
 type alias Model = { title : String, picture : String }
 {% endhighlight %}
 
@@ -175,7 +175,7 @@ Model is a nickname for a Record with two fields: "title", which has type String
 
 Now we can use our new Model "type alias" in our code to refer to that specific form of record.
 
-{% highlight elm %}
+{% highlight haskell %}
 type alias Model = { title : String, picture : String }
 model : Model
 model = { title = "cats",
@@ -184,7 +184,7 @@ model = { title = "cats",
 
 But there's one more thing we can do to make our code a little more idiomatic and similar to how you'll see most other Elm code out there. Whenever we create a type alias, Elm makes a new type constructor for us for free. Remember that type constructors are used to create values of a specific type, and this type needs a "title" and a "picture". So we can use our new type constructor to create a model like this:
 
-{% highlight elm %}
+{% highlight haskell %}
 -- make the Model type constructor
 type alias Model = { title : String, picture : String }
 
@@ -199,7 +199,7 @@ model = Model "cats" "https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif"
 
 Just like normal functions can accept inputs (also called arguments or parameters), types can accept inputs as well. The formal word for this is called **parameterized types**. It's an intimidating term, but a parameterized type is just a type that can have another type inside of it. Lists are parameterized types, because they can hold other types inside of them. So when we write type declarations for Lists, it usually looks something like this:
 
-{% highlight elm %}
+{% highlight haskell %}
 -- function for the length of a list
 length : List things -> Int
 
@@ -217,7 +217,7 @@ We need to use type parameters when we write the type declaration for our `view`
 
 Let's add a type declaration for our `view` function.
 
-{% highlight elm %}
+{% highlight haskell %}
 view : Model -> Html Message
 view model = div
   [ pageStyling ]
@@ -236,7 +236,7 @@ view model = div
 
 `view` is a function that takes a Model and gives back an Html value that is capable of producing Messages. Message is a type parameter for the Html type. It essentially tells us that Html and Message are linked. If we named our Message type something else, we would use that name instead of Message. We could also use a generic type variable to show this.
 
-{% highlight elm %}
+{% highlight haskell %}
 -- These are all essentially equivalent:
 view : Model -> Html Message -- Html produces ONLY our specific Message type we created
 view : Model -> Html message -- Html can produce messages of any type
@@ -247,7 +247,7 @@ That should be about good for type declarations. We can add declarations for the
 
 Since we went through a lot of examples and it was probably hard to tell what code you needed to write and what you didn't, here's the final code for our program so far.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)

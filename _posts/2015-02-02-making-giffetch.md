@@ -10,7 +10,7 @@ comments: true
 
 We'll start this program the way we start every Elm program, by importing the Html module and defining the `main` function.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 
 main = Html.text "Starting text"
@@ -57,7 +57,7 @@ Let's use the `img` function to draw an image on the page.
 Replace `Html.text "Starting text"` with `Html.img [] []`, then compile.
 {: .info}
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 
 main = Html.img [] []
@@ -70,7 +70,7 @@ What we're doing here is creating an image element and providing an empty List o
 
 Spacing usually doesn't matter in Elm (it does in some languages), so all of these are equivalent. If spacing does matter and you mess it up, the Elm compiler will tell you, so I won't bother to list out the places here. It's not really something to worry about.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 
 main = Html.img
@@ -78,7 +78,7 @@ main = Html.img
   []
 {% endhighlight %}
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 
 main = Html.img [ ] [ ]
@@ -126,7 +126,7 @@ Import the Html.Attributes module, then add a `src` with a URL to the first inpu
 
 The order of the `import` lines doesn't matter.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 import Html.Attributes
 

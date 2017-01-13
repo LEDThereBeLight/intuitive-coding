@@ -12,7 +12,7 @@ It's fun to make a language, and we do it all the time in programming.
 
 Let's look at the code we wrote again.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 
 main = Html.text "Sucking at something is the first step towards being sorta good at something."
@@ -69,13 +69,13 @@ Say you have a bunch of individual Characters:
 
 Characters are great all by themselves, but sometimes we want to put them together to make words. We can string letters together to make words by putting them inside a List, like this:
 
-{% highlight elm %}
+{% highlight haskell %}
 ['h', 'e', 'l', 'l', 'o']
 {% endhighlight %}
 
 But since it's pretty common to talk about words in our programs, we don't have to write them out as Lists of Characters with square brackets and single quotes going every which way. There's another type that exists as a kind of shorthand for Lists of Characters. It's called a **String**, and we make one with double quotes: `" "`.
 
-{% highlight elm %}
+{% highlight haskell %}
 "Who's this Rorschach dude and why is he so good at drawing pictures of my dad beating me?"
 {% endhighlight %}
 

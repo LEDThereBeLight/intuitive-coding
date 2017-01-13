@@ -38,7 +38,7 @@ We call a function by writing out the name of the function, and then giving it a
 
 Remember the code we just wrote?
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 
 main = Html.text "Sucking at something is the first step towards being sorta good at something."
@@ -56,7 +56,7 @@ Remember:
   * we tell the computer to run a function by calling its name
 
 [1]: Technically, "parameter" and "argument" are not *necessarily* the same. Say you have a function:
-{% highlight elm %}
+{% highlight haskell %}
 add num1 num2 = num1 + num2
 
 main = Html.text <| toString <| add 3 4

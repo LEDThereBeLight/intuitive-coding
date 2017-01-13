@@ -41,7 +41,7 @@ We can use the Html module's text function to display our sentence on the page.
 
 Let's talk about the `.` in between Html and text now.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 
 main = Html.text "Sucking at something is the first step towards being sorta good at something."
