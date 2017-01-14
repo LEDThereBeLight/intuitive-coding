@@ -4,5 +4,4 @@ markdown: kramdown
 kramdown:
   input: GFM
 exclude: ['images/original']
-permalink: :title
-highlighter: pygments
+permalink: :title.html
