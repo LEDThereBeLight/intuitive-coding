@@ -14,7 +14,7 @@ Let's go top to bottom and refactor. We'll start with the model.
 
 ### Refactoring the model
 
-{% highlight elm %}
+{% highlight haskell %}
 model = ("cats", "https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif")
 {% endhighlight %}
 
@@ -36,7 +36,7 @@ Let's convert our model from a Tuple into a Record. Just like Lists use square b
 
 Inside the curly braces, we list out the pairs of names and values separated by `=` signs. For example, our model as a Record would look like:
 
-{% highlight elm %}
+{% highlight haskell %}
 model = { title = "cats",
           picture = "https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif" }
 {% endhighlight %}
@@ -45,7 +45,7 @@ Now we can access each element of the record by its name instead of a nameless T
 
 Remember the `.` symbol that we use with modules and functions? It means "look inside". Well, with records, we want to *look inside* the record for a specific name, and pull out that value. So we can write,
 
-{% highlight elm %}
+{% highlight haskell %}
 view model = Html.div
   [ pageStyling ]
   [
@@ -59,7 +59,7 @@ Easier to read, right? Now we don't have to look up how the model is defined eve
 
 We also need to change the update function since that uses the model as well.
 
-{% highlight elm %}
+{% highlight haskell %}
 update message model =
        if message == "asked for cats" then      { title = "cats",
             picture = "https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif" }
@@ -75,7 +75,7 @@ update message model =
 
 It's kind of a pain to see the image location URL everywhere we use the model. Let's make functions for each of the image locations to make our code a little cleaner.
 
-{% highlight elm %}
+{% highlight haskell %}
 catPicture = "https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif"
 dogPicture = "https://media.giphy.com/media/oJWx7MtpR2qdi/giphy.gif"
 iceCreamPicture = "https://media.giphy.com/media/QjagU0ONoQwCc/giphy.gif"
@@ -87,7 +87,7 @@ Go ahead and replace the URLs with the new functions in our code.
 
 Here's what our update function looks like currently.
 
-{% highlight elm %}
+{% highlight haskell %}
 update message model =
        if message == "asked for cats"      then { title = "cats",
                                                   picture = catsPicture }
@@ -102,7 +102,7 @@ It works, but it's a little crude. We can do two things to clean it up. The firs
 
 Here's the template for a case statement:
 
-{% highlight elm %}
+{% highlight haskell %}
 case {- variable name -} of
   firstPattern  -> firstOutput
   secondPattern -> secondOutput
@@ -111,7 +111,7 @@ case {- variable name -} of
 
 Replacing the "if statements" with "case statements" in our update function will look like this:
 
-{% highlight elm %}
+{% highlight haskell %}
 update message model =
   case message of
     "asked for cats"      -> { title = "cats",
@@ -133,14 +133,14 @@ Using a case statement instead of if statements isn't just for aesthetics. It ta
 Note that we need to use a skinny arrow `->`, not an `=` sign, to say what the function should output if the `message` matches the pattern on the left.
 
 You're probably wondering what this line at the bottom means.
-{% highlight elm %}
+{% highlight haskell %}
 _ -> model
 {% endhighlight %}
 
 
 This does the same thing as the line in our "if statement" that said
 
-{% highlight elm %}
+{% highlight haskell %}
 else model
 {% endhighlight %}
 
@@ -156,7 +156,7 @@ Right now, we're simply using Strings for our messages. This works fine, and mak
 
 Remember how the Bool type has two options, True and False? Here's the definition of Bool. We'll explain what each part means.
 
-{% highlight elm %}
+{% highlight haskell %}
 type Bool = True | False
 {% endhighlight %}
 
@@ -171,7 +171,7 @@ We create types for values that don't fit nicely into Elm's predefined types. Fo
 
 So let's define a new type called Message as follows:
 
-{% highlight elm %}
+{% highlight haskell %}
 type Message = AskedForCats | AskedForDogs | AskedForIceCream
 {% endhighlight %}
 
@@ -184,7 +184,7 @@ Now we can replace our String messages in the `update` and `view` functions with
 
 Here's the new `update`:
 
-{% highlight elm %}
+{% highlight haskell %}
 update message model =
   case message of
     AskedForCats     -> { title = "cats",
@@ -201,7 +201,7 @@ Note that we can get rid of the `_ -> model` line at the end because the message
 
 Let's also change the `view` to use our new messages:
 
-{% highlight elm %}
+{% highlight haskell %}
 view model = Html.div
   [ pageStyling ]
   [
@@ -223,7 +223,7 @@ Compile the code and it should run.
 
 Our code is looking a lot better, but the `update` function is still bothering me.
 
-{% highlight elm %}
+{% highlight haskell %}
 update message model =
   case message of
     AskedForCats     -> { title = "cats",
@@ -242,7 +242,7 @@ We can accomplish this with **record update** syntax. It's not *really* updating
 
 <!-- // Need to talk about how it also makes the code more efficient because it reuses the parts that are the same  -->
 
-{% highlight elm %}
+{% highlight haskell %}
 update message model =
   case message of
     AskedForCats     -> { model | title = "cats",
@@ -275,7 +275,7 @@ We can fix that by **exposing** modules' functions in our code.
 
 For example, we can change this:
 
-{% highlight elm %}
+{% highlight haskell %}
 view model = Html.div
   [ pageStyling ]
   [
@@ -293,7 +293,7 @@ view model = Html.div
 
 ...into this:
 
-{% highlight elm %}
+{% highlight haskell %}
 view model = div
   [ pageStyling ]
   [
@@ -314,7 +314,7 @@ Does it make the code easier to read? That's up to you. But let's learn how to d
 
 To allow the use of functions without writing out the module name first, we need to update the import lines at the top of our code to "expose" certain functions. Here's what we've got right now:
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 import Html.Attributes
 import Html.Events
@@ -322,7 +322,7 @@ import Html.Events
 
 We can either import every function that we use individually, like this:
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html exposing (text, div, h1, br, button, img)
 import Html.Attributes exposing (src)
 import Html.Events exposing (onClick)
@@ -330,7 +330,7 @@ import Html.Events exposing (onClick)
 
 Or if we're lazy, we can just expose *everything* inside the module.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
@@ -342,7 +342,7 @@ One more point. In larger applications, exposing everything usually isn't a good
 
 Here's the final code we end up with.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)

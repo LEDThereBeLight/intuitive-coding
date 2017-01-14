@@ -40,14 +40,16 @@ Using a *declarative* English question, we might ask,
 Does the list contain "Chips Ahoy Cookies"?
 {: .quote}
 
-Now what about imperative?
+Not so bad.
+
+Now what about if we wanted to use imperative sentences?
 
 Say the person who has the list is a complete idiot. Instead of just asking them if something is in the list, you have to tell them how to look. You might say something like,
 
 Look in the list to see if it contains "Chips Ahoy Cookies" and tell me yes or no.
 {: .quote}
 
-Oops! You forgot to explain how to look in the list.
+But you forgot to explain how to look in the list.
 
 Fine... go through the items in the list one by one and tell me if any of them are "Chips Ahoy Cookies".
 {: .quote}
@@ -57,7 +59,7 @@ Oops! You forgot to say when to stop, so you never get your answer!
 Okay, go through the items in the list one by one and if any of them are "Chips Ahoy Cookies", stop looking and tell me "Yes". Otherwise, if you get to the end of the list, stop looking and tell me "No".
 {: .quote}
 
-I don't know about you, but I'm sick of this already and we haven't even gotten to coding. It's like a stupid trap in some terrible video game that exists just to make you angry.
+I don't know about you, but I'm sick of this already and we haven't even gotten to coding. It's like a trap in some terrible video game that exists just to make you angry.
 
 ### What this means for our code
 
@@ -65,8 +67,8 @@ If our goal is to be productive coders, we should strive to write code that's *d
 
 Just to drive the point home, here is how we would implement the procedure we just walked through in both Elm and Javascript.
 
-{% highlight elm %}
-shoppingList = List "Nutella", "Frozen Pizza", "Ranch Dressing", "Potato Chips (ruffled)"
+{% highlight haskell %}
+shoppingList = [ "Nutella", "Frozen Pizza", "Ranch Dressing", "Potato Chips (ruffled)" ]
 cookies = "Chips Ahoy Cookies"
 
 answer = List.contains shoppingList cookies

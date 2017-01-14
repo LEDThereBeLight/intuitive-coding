@@ -12,7 +12,7 @@ Open up [elm-lang.org/try](http://www.elm-lang.org/try) in a new tab, and let's 
 
 Let's start by writing out this Elm code into the editor and running it with the *Compile* button.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 
 main = Html.text "Sucking at something is the first step towards being sorta good at something."

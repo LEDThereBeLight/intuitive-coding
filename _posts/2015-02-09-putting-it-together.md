@@ -14,7 +14,7 @@ The secret is that we haven't gotten the whole story about the view. The view is
 
 Here's the code from our view again.
 
-{% highlight elm %}
+{% highlight haskell %}
 view model = Html.div
   [ pageStyling ]
   [
@@ -33,7 +33,7 @@ view model = Html.div
 To bring our view to life, we need to import another module: `Html.Events`. This module is full of functions that produce "events" when certain things happen, which will feed into our update function once we wire everything together.
 
 First, add an import line near the top of the file (the order of imports doesn't matter):
-{% highlight elm %}
+{% highlight haskell %}
 import Html.Events
 {% endhighlight %}
 
@@ -47,7 +47,7 @@ Remember, Html functions take two inputs:
 
 Since `onClick` is going to affect the functionality of each button, let's add `Html.Events.onClick` to the List of attributes for each of our buttons in the view and supply the messages we created in the last section as inputs.
 
-{% highlight elm %}
+{% highlight haskell %}
 Html.button [ buttonStyling, Html.Events.onClick "asked for cats" ] [ Html.text "cats" ],
 Html.button [ buttonStyling, Html.Events.onClick "asked for dogs" ] [ Html.text "dogs" ],
 Html.button [ buttonStyling, Html.Events.onClick "asked for ice cream" ] [ Html.text "ice cream" ],
@@ -86,7 +86,7 @@ And then we're ready for a new message again.
 
 Let's change our `main` to use `Html.beginnerProgram`.
 
-{% highlight elm %}
+{% highlight haskell %}
 main = Html.beginnerProgram { model = model,
                               view = view,
                               update = update }
@@ -97,7 +97,7 @@ What we're doing here is giving Html.beginnerProgram a Record with three values.
 
 Here's our final code.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 import Html.Attributes
 import Html.Events

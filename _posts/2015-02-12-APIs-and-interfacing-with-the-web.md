@@ -24,7 +24,7 @@ If you've ever seen a Twitter feed embedded into a website, for example, it's pr
 
 Let's change our view to add an HTML `input` for our search bar and get rid of the three buttons we were using to display pictures. We'll also add a "more please!" button that we'll use to trigger a search.
 
-{% highlight elm %}
+{% highlight haskell %}
 view : Model -> Html Message
 view model = div
   [ pageStyling ]
@@ -42,7 +42,7 @@ view model = div
 
 An `input` element, by default, is just a text box that we can type in. We'll style it first, and then add functionality.
 
-{% highlight elm %}
+{% highlight haskell %}
 inputStyling =
     style
         [
@@ -72,7 +72,7 @@ We can type in our textbox now, but we're not saving the text anywhere, so it do
 
 Let's add a new String field in our model that we'll use to keep track of the words in the search box.
 
-{% highlight elm %}
+{% highlight haskell %}
 type alias Model =
     {
       title : String,
@@ -83,7 +83,7 @@ type alias Model =
 
 We'll then change the `value` HTML attribute of the input element to use the model's `searchText`. Remember, HTML attributes go in the input to the function.
 
-{% highlight elm %}
+{% highlight haskell %}
 view model = div
   {- ... -}
   input [ inputStyling, value model.searchText ] [],
@@ -93,7 +93,7 @@ view model = div
 
 We can also add a "placeholder", an HTML attribute that only shows up if there's no text present in the box.
 
-{% highlight elm %}
+{% highlight haskell %}
 view model = div
   {- ... -}
   input [
@@ -108,7 +108,7 @@ view model = div
 
 We're going to want to update the model so that the searchText changes whenever anything is typed into the box. Let's go ahead and just print the model to the screen so we can test it easily first.
 
-{% highlight elm %}
+{% highlight haskell %}
 view model = div
   {- ... -}
   input [
@@ -133,7 +133,7 @@ The HTML language has a builtin **event attribute** called "[onInput](https://de
 
 We've already imported the Elm Html.Events module for when we used the "onClick" attribute with our old buttons. We'll use the "onInput" event the same way and trigger a new message whenever the text changes.
 
-{% highlight elm %}
+{% highlight haskell %}
 view model = div
   {- ... -}
   input [
@@ -149,7 +149,7 @@ view model = div
 
 Now we have to change our update function to get rid of the old button messages and handle our new SearchTextChanged message.
 
-{% highlight elm %}
+{% highlight haskell %}
 update message model =
     case message of
         SearchTextChanged newText ->
@@ -177,7 +177,7 @@ Instead, `Html.program`'s Record input requires four fields:
 
 Let's change our `main` function to use this new function, and then walk through how we can update the rest of our program to make everything fit together.
 
-{% highlight elm %}
+{% highlight haskell %}
 main =
     Html.program
         { init = init
@@ -193,7 +193,7 @@ We'll start by explaining the `init` field in the program's input Record.
 
 If you look at the type definition on `Html.program`'s documentation page, `init` is looking for a Tuple made of a Model and a Command capable of producing Messages. Here's what that looks like.
 
-{% highlight elm %}
+{% highlight haskell %}
 init : ( Model, Cmd Message )
 {% endhighlight %}
 
@@ -203,14 +203,14 @@ In this case, Cmd is a parameterized type. It's capable of producing a Message w
 
 Let's define the `init` function.
 
-{% highlight elm %}
+{% highlight haskell %}
 init :  ( Model, Cmd Message )
 init = ( Model "" "" "", Cmd.none )
 {% endhighlight %}
 
 The three sets of `""` mean that `init` will initialize our model to an empty topic, picture, and searchText. It's just another way of saying this:
 
-{% highlight elm %}
+{% highlight haskell %}
 -- Remember:
 -- type alias Model =
 --    { topic : String,
@@ -230,7 +230,7 @@ Just like the `Cmd` module has a `Cmd.none` function to represent *no* command, 
 
 So we can declare our subscriptions function like this:
 
-{% highlight elm %}
+{% highlight haskell %}
 subscriptions : Model -> Sub Message
 subscriptions model = Sub.none
 {% endhighlight %}
@@ -241,13 +241,13 @@ subscriptions model = Sub.none
 
 Now that we're using `Html.program`, we need to change our `update` function from
 
-{% highlight elm %}
+{% highlight haskell %}
 update : Message -> Model -> Model
 {% endhighlight %}
 
 to
 
-{% highlight elm %}
+{% highlight haskell %}
 update : Message -> Model -> ( Model, Cmd Message )
 {% endhighlight %}
 
@@ -255,7 +255,7 @@ In other words, whenever the `update` function runs, it will also always run a C
 
 Let's get the types to match up by updating what happens when we receive a SearchTextChanged message.
 
-{% highlight elm %}
+{% highlight haskell %}
 update : Message -> Model -> ( Model, Cmd Message )
 update message model =
     case message of
@@ -271,7 +271,7 @@ When we click the "more please!" button, we want to trigger a new message that w
 
 We'll make a new message called `AskedForNewPic`.
 
-{% highlight elm %}
+{% highlight haskell %}
 type Message
     = SearchTextChanged String
     | AskedForNewPic
@@ -279,7 +279,7 @@ type Message
 
 We'll also add a way to trigger this message in our view.
 
-{% highlight elm %}
+{% highlight haskell %}
 view : Model -> Html Message
 view model = div
   [ pageStyling ]
@@ -297,7 +297,7 @@ view model = div
 
 Now we need to handle it in the update function.
 
-{% highlight elm %}
+{% highlight haskell %}
 update : Message -> Model -> ( Model, Cmd Message )
 update message model =
     case message of
@@ -499,7 +499,7 @@ There's a whole module named [Json.Decode](http://package.elm-lang.org/packages/
 
 We need to import the `Json.Decode` module first at the top of our file.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Json.Decode as Decode
 {% endhighlight %}
 
@@ -511,7 +511,7 @@ If you need to use decoders for more complicated tasks, the best introduction to
 
 The type signature for `at` looks like this:
 
-{% highlight elm %}
+{% highlight haskell %}
 Json.Decode.at : List String -> Decoder a -> Decoder a
 {% endhighlight %}
 
@@ -519,7 +519,7 @@ It takes in a List of Strings that represent the location of our data, and a Dec
 
 Let's make a decoder with the `Json.Decode.at` function.
 
-{% highlight elm %}
+{% highlight haskell %}
 -- decodeGifUrl is a decoder that gives back a String
 decodeGifUrl : Decode.Decoder String
 decodeGifUrl =
@@ -534,7 +534,7 @@ Now that we have a Decoder that we can use to get the image URL from the JSON re
 
 Making a request from a web server is an action, so we'll need to make a command.
 
-{% highlight elm %}
+{% highlight haskell %}
 getRandomGif : String -> Cmd Message
 getRandomGif topic =
     let
@@ -549,7 +549,7 @@ getRandomGif topic =
 
 `Http` is a module that makes requests to web servers. We need to import it into our code.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Http
 {% endhighlight %}
 
@@ -557,7 +557,7 @@ import Http
 
 We also need to add this new Message type.
 
-{% highlight elm %}
+{% highlight haskell %}
 type Message
     = AskedForNewPic
     | SearchTextChanged String
@@ -568,7 +568,7 @@ In this case, `NewGifReceived` is *parameterized* with a Result, which can eithe
 
 We also need to handle the new Message in the `update` function.
 
-{% highlight elm %}
+{% highlight haskell %}
 update : Message -> Model -> ( Model, Cmd Message )
 update message model =
     case message of
@@ -597,7 +597,7 @@ We also added a user experience fix to reset the search bar whenever a search is
 
 Here's the final code:
 
-{% highlight elm %}
+{% highlight haskell %}
 module Main exposing (..)
 
 import Html exposing (..)

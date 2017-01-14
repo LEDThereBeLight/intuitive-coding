@@ -28,7 +28,7 @@ Functions work the same way. We ask the computer to give us something, and we an
 
 ### I/O
 
-We call the information that the function needs the **inputs**, **arguments**, or **parameters** to the function, and what it gives us back is called the **output**. Input, argument, and parameter are all synonymous.[^1]
+We call the information that the function needs the **inputs**, **arguments**, or **parameters** to the function, and what it gives us back is called the **output**. Input, argument, and parameter all mean the same thing.
 
 So how do we use a function? It's easy. All we have to do is get its attention. And we get a function's attention the same way we get anyone's attention: by **calling its name**.
 
@@ -38,7 +38,7 @@ We call a function by writing out the name of the function, and then giving it a
 
 Remember the code we just wrote?
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 
 main = Html.text "Sucking at something is the first step towards being sorta good at something."
@@ -55,10 +55,10 @@ Remember:
   * functions always give us something back
   * we tell the computer to run a function by calling its name
 
-[1]: Technically, "parameter" and "argument" are not *necessarily* the same. Say you have a function:
-{% highlight elm %}
+<!-- [^1]: Technically, "parameter" and "argument" are not *necessarily* the same. Say you have a function:
+{% highlight haskell %}
 add num1 num2 = num1 + num2
 
 main = Html.text <| toString <| add 3 4
 {% endhighlight %}
-You would say "the arguments to the function add are '3' and '4'", or "the actual parameters to add are '3' and '4'." That's what actually goes into the function when you call it. On the other hand, you would say, "the formally bound parameters in the add function are num1 and num2", because they're what the function is defined to use. The function, when called, takes the *actual* parameters and *binds* the formal parameter names to those values.
+You would say "the arguments to the function add are '3' and '4'", or "the actual parameters to add are '3' and '4'." That's what actually goes into the function when you call it. On the other hand, you would say, "the formally bound parameters in the add function are num1 and num2", because they're what the function is defined to use. The function, when called, takes the *actual* parameters and *binds* the formal parameter names to those values. -->

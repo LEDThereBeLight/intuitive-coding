@@ -41,13 +41,13 @@ One thing we can do to improve our program is factor out the style attributes in
 Let's create a new function called `pageStyling`, and define it to be equal to the HTML style attributes we used in our `div` container.
 {: .info}
 
-{% highlight elm %}
+{% highlight haskell %}
 pageStyling = Html.Attributes.style [ ("text-align", "center") ]
 {% endhighlight %}
 
 Now we can use our new function to replace the style attributes we used as the first input to our `Html.div` function.
 
-{% highlight elm %}
+{% highlight haskell %}
 Html.div
   [ pageStyling ]
   {- other page elements -}
@@ -64,7 +64,7 @@ We can actually use the same process of pulling out the styling for each element
 Let's make new functions for `headingStyling`, `buttonStyling`, and `imageStyling`.
 {: .info}
 
-{% highlight elm %}
+{% highlight haskell %}
 headingStyling =
   Html.Attributes.style
     [
@@ -108,7 +108,7 @@ imageStyling =
 
 Now we can use these new functions we just wrote to replace the styling in our `main` function. I'm also going play with the spacing in the code a bit for readability.
 
-{% highlight elm %}
+{% highlight haskell %}
 import Html
 import Html.Attributes
 
