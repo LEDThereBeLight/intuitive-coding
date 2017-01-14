@@ -21,8 +21,8 @@ But the truth is that we can make the computer speak any language we want, so wh
 
 Javascript and Java are popular languages, but they're not easy to program in. So instead of conforming, we're going to take advantage of the technological advances in the last few years and start by learning a modern language called Elm. This language allows us to create modern applications in a fraction of the time of the more "popular" languages. More importantly, it also enforces good coding practices by design, so you can learn to program the right way naturally and then take those good habits to larger languages that allow you to do anything, whether it's a good idea or not.
 
-### But I need to learn Javascript to get a job!
+<!-- ### But I need to learn Javascript to get a job!
 
-If you want to learn Javascript, or Python, or any other mainstream language, trust me when I tell you that starting with Elm to learn the underlying concepts will make your life easier. My goal is to get you to learn coding as quickly as possible, not to push any specific language on you. The concepts you will learn through Elm will *all* transfer over to the other languages. Besides, once you know how to code, you're realize the language *doesn't matter*.
+If you want to learn Javascript, or Python, or any other mainstream language, trust me when I tell you that starting with Elm to learn the underlying concepts will make your life easier. My goal is to get you to learn coding as quickly as possible, not to push any specific language on you. The concepts you will learn through Elm will *all* transfer over to the other languages. Besides, once you know how to code, you're realize the language *doesn't matter*. -->
 
 Let's begin.
