@@ -5,4 +5,3 @@ kramdown:
   input: GFM
 exclude: ['images/original']
 permalink: :title.html
-highlighter: pygments
