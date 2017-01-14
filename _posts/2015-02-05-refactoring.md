@@ -23,7 +23,7 @@ The process of cleaning up our writing is called proofreading, and the process o
 
 There are a few main things we look for when refactoring, roughly in order of importance:
 
-  1. **Complex code.** "Complex" literally means "built from many interconnected parts". We should try to think of our code as built from Legos that can be mixed and matched. Elm helps us out with this naturally.
+  1. **Making code less complex.** "Complex" literally means "built from many interconnected parts". We should try to think of our code as built from many small, independent pieces, rather than pieces that all depend on one another.
   2. **Hard to read code**, like unhelpful variable names. We should be able to read our code without having to constantly look up the definitions of functions.
   3. **Horribly inefficient code**, though this takes some practice to be able to spot. It's better to have poor performance than to waste time optimizing something that doesn't need to be optimized.
   4. **Repetition**. Finding repetition means we should *consider* replacing it with a function, since it sets someone up to forget changing one of the occurrences if they want to modify our code in the future.
@@ -126,7 +126,7 @@ main = Html.div
     Html.img [ imageStyling, Html.Attributes.src "https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif" ] []
   ]
 
-*(style definitions)*
+{- other style definitions -}
 {% endhighlight %}
 
 Much cleaner! Now, if we know a little Elm, we can just read the code and understand what's happening without having to worry about the details about how every individual element on the page is styled.

@@ -65,13 +65,13 @@ I don't know about you, but I'm sick of this already and we haven't even gotten 
 
 If our goal is to be productive coders, we should strive to write code that's *declarative* instead of *imperative* whenever we can. Tell the computer what you want, instead of how to do its job. Real coding is always a mix of the two styles, because there's not always a declarative way to get what you're looking for. But programming languages tend to lean one way or another, either more imperative or more declarative. Elm leans heavily toward declarative.
 
-Just to drive the point home, here is how we would implement the procedure we just walked through in both Elm and Javascript.
+Just to drive the point home, here is how we would implement the procedure we just walked through in Elm.
 
 {% highlight haskell %}
 shoppingList = [ "Nutella", "Frozen Pizza", "Ranch Dressing", "Potato Chips (ruffled)" ]
 cookies = "Chips Ahoy Cookies"
 
-answer = List.contains shoppingList cookies
+answer = List.member cookies shoppingList
 {% endhighlight %}
 
 And here's the translation into Javascript.
@@ -95,7 +95,7 @@ var answer = search(list, cookies);
 
 Computers read top-down, left-to-right just like us. Imagine you are a 5 year old just learning how to read. You don't know a lot of words, but you know some words. You can use the words you already know to help you learn more words.
 
-But you've just opened up a new book, and you read this sentence:
+You've just opened up a new book, and you read this sentence:
 
 Not for the first time, an `argument`{:.quote-text} had broken out over `breakfast`{:.quote-text .red} at number four, Privet `Drive`{:.quote-text .red}.
 {: .quote}
@@ -135,7 +135,7 @@ We as coders teach computers new words using the small set of words the computer
 
 Computers look up and replace these new words with their definitions until they get down to basic operations they know how to perform. This process is called **evaluating expressions**. Evaluating an expression just means replacing an expression with a definition to create a **value**, which is simply another expression that we consider the "final answer." That is, it's simplified enough for the computer to work with.
 
-In our case, our internet browser takes care of converting our code into "computer-readable" values. As long as we follow the rules of the Javascript language, we can create expressions in our program and the browser will know how to look up and convert into values it knows how to work with.
+In our case, the person who wrote the Elm language takes care of converting our code into "computer-readable" values. As long as we follow the rules of Elm, we can create expressions in our program that will get translated down into the words the computer is born knowing - we don't have to use those words directly.
 
 ![compiling](images/compiling.png)
 *Elm compiles to Javascript which your browser then compiles to "machine code"*
