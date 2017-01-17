@@ -59,9 +59,9 @@ comments: true
       <article class="content">
         {{ content }}
 
-        <button>run</button>
+        <button id="run">run</button>
+        <pre class="messages"></pre>
         <pre class="result"></pre>
-        <pre class="out">output: </pre>
 
       </article>
 
@@ -102,7 +102,7 @@ comments: true
         (d.head || d.body).appendChild(s);
         })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments.</a></noscript>
       {% endif %}
     </div>
   </div>
@@ -145,18 +145,17 @@ repl.connect().then(
 );
 
 function start() {
-    document.querySelector('button').onclick = function() {
-
+    document.querySelector('button#run').onclick = function() {
         repl.evaluate(
             editor.getValue(),
              {
                 stdout: function(str) {
-                    document.querySelector('.out').innerHTML += str + '\n';
+                    document.querySelector('.result').innerHTML += str + '\n';
                 }
              }
         ).then(
             function(result) {
-                document.querySelector('.result').innerHTML += (result.error || result.data) + '\n';
+                document.querySelector('.out').innerHTML += (result.error || result.data) + '\n';
             },
             function(err) {
                 console.error(err);

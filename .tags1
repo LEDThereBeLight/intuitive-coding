@@ -4,3 +4,53 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+main	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^<main class="page-container">$/;"	function	line:7
+div	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^  <div class="page-content">$/;"	function	line:9
+div	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^    <div class="container">$/;"	function	line:10
+div	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^      <div class="breadcrumb-holder">$/;"	function	line:11
+header	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <header id="breadcrumb" class="breadcrumb">$/;"	function	line:12
+a	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^          <a id="open" class="breadcrumb-toggle">$/;"	function	line:13
+span	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^            <span><\/span>$/;"	function	line:14
+span	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^            <span><\/span>$/;"	function	line:15
+span	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^            <span><\/span>$/;"	function	line:16
+span	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^          <span class="breadcrumb-section">$/;"	function	line:19
+i	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^              <i class="fa fa-code"><\/i>$/;"	function	line:22
+i	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^              <i class="fa fa-play-circle"><\/i>$/;"	function	line:24
+i	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^              <i class="fa fa-usd"><\/i>$/;"	function	line:26
+a	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^            <a class="breadcrumb-next" href="{{ page.next.url }}">$/;"	function	line:32
+i	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^              <i class="fa fa-angle-right"><\/i>$/;"	function	line:33
+span	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^              <span>Next article<\/span>$/;"	function	line:34
+a	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^            <a class="breadcrumb-previous" href="{{ page.previous.url }}">$/;"	function	line:39
+i	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^              <i class="fa fa-angle-left"><\/i>$/;"	function	line:40
+span	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^              <span>Previous article<\/span>$/;"	function	line:41
+nav	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^      <nav id="menu" class="menu">$/;"	function	line:47
+ul	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <ul><\/ul>$/;"	function	line:48
+article	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^      <article class="content">$/;"	function	line:52
+div	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <div id="{{ page.example }}"><\/div>$/;"	function	line:53
+script	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <script src="javascript\/{{ page.example }}.js"><\/script>$/;"	function	line:54
+script	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <script>Elm.Main.embed(document.querySelector('#{{ page.example }}'))<\/script>$/;"	function	line:55
+article	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^      <article class="content">$/;"	function	line:59
+button	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <button id="run">run<\/button>$/;"	function	line:62
+pre	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <pre class="messages"><\/pre>$/;"	function	line:63
+pre	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <pre class="result"><\/pre>$/;"	function	line:64
+nav	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^      <nav class="pagination">$/;"	function	line:68
+a	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^          <a class="pagination-previous" href="{{ page.previous.url }}">$/;"	function	line:70
+em	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^            <em>&larr; Previous<\/em>$/;"	function	line:71
+strong	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^            <strong>{{ page.previous.title }}<\/strong>$/;"	function	line:72
+a	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^          <a class="pagination-next" href="{{ page.next.url }}">$/;"	function	line:77
+em	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^            <em>Next &rarr;<\/em>$/;"	function	line:78
+strong	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^            <strong>{{ page.next.title }}<\/strong>$/;"	function	line:79
+h	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <h1 style="font-size: 24px;padding-left:30px;padding-top:30px">Ask a simple question. Get a simple answer.<\/h1>$/;"	function	line:85
+div	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <div id="disqus_thread"><\/div>$/;"	function	line:86
+script	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <script>$/;"	function	line:87
+noscript	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^        <noscript>Please enable JavaScript to view the <a href="https:\/\/disqus.com\/?ref_noscript">comments.<\/a><\/noscript>$/;"	function	line:105
+a	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^<a id="top" class="elevator">$/;"	function	line:111
+i	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^  <i class="fa fa-angle-up"><\/i>$/;"	function	line:112
+span	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^  <span>Back to top<\/span>$/;"	function	line:113
+link	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^<link rel="stylesheet" href="css\/codemirror.css">$/;"	function	line:117
+link	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^<link rel="stylesheet" href="css\/zenburn.css">$/;"	function	line:118
+script	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^<script src="javascript\/codemirror.js"><\/script>$/;"	function	line:120
+script	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^<script src="javascript\/replitapi.js"><\/script>$/;"	function	line:121
+script	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^<script src="javascript\/python.js"><\/script>$/;"	function	line:122
+script	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^<script>$/;"	function	line:124
+start	C:\Users\zacha_000\workspace\intuitive-coding\_layouts\problem.html	/^function start() {$/;"	function	line:147

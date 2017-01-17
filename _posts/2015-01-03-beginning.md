@@ -8,7 +8,7 @@ comments: true
 
 ### Our first program
 
-Open up [elm-lang.org/try](http://www.elm-lang.org/try) in a new tab, and let's draw something on the screen.
+Open up <a href="http://www.elm-lang.org/try" target="_blank">elm-lang.org/try</a>, and let's draw something on the screen.
 
 Let's start by writing out this Elm code into the editor and running it with the *Compile* button.
 
