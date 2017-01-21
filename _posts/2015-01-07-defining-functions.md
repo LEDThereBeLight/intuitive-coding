@@ -25,7 +25,7 @@ The second sentence is a special kind of expression, because it has that `=` sym
 The whole line says to create a new word called `main` and define it to be the functional expression
 `Html.text "Sucking at something is the first step towards being sorta good at something."` In programming, whenever we make a new word we call it a **variable**, because the definition varies depending on how we write our program.
 
-In Elm, every variable is a function, and every variable value has a type. We are not able to define anything else.
+In Elm, every variable is a function or a command. We are not able to define anything else.
 
 ### Defining words
 
@@ -49,7 +49,7 @@ But `main` is very particular about the kinds of things it is willing to show on
 
 ### Types
 
-A **type** is a category that we decide a value falls into. Each type has a name, and we always capitalize their names to make it easier to tell them apart from other kinds of words, like functions.
+A **type** is a category that we decide a value, like a variable, falls into. Each type has a name, and we always capitalize their names to make it easier to tell them apart from other kinds of words, like functions.
 
 There are lots of different types.
 

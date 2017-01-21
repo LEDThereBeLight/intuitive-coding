@@ -13,13 +13,42 @@ Well, it turns out we do have magic. It's called coding, and it allows us to do 
 
 Wizards in the movies dedicate years of their lives reading dusty old books that look like they're written in ancient, cryptic languages. And that's actually not a bad description for what it feels like watching someone program in [Haskell](https://www.haskell.org/).
 
-But learning to program shouldn't be difficult. Anyone can be a coder - there are no muggles. All it takes is time to learn the language. The problem with the way most people teach coding is that they start with rules and theory using using the language of math. And when you don't have an intuitive understanding of math, programming seems even more difficult. But programming is more like a language than a science. It's a set of words for ideas, so there are many other ways to teach it.
- -->
-The first language I tried to learn was C++. It's an easy trap to fall into. At the time, I thought I should be learning the languages most other people use. They must be popular for a good reason, right?
+But learning to program shouldn't be difficult. Anyone can be a coder - there are no muggles. All it takes is time to learn the language. -->
 
-But the truth is that we can make the computer speak any language we want, so why use a language that's difficult to program in? Computers have come a long way in the last 60 years, and we don't need to program the way we did back then.
+The trouble with the way most people teach coding is that they start with theory and use math for examples. But most of us don't have an intuitive understanding of math, which makes coding seem even *more* difficult. But the secret is that programming is more like a language than a science. It's a set of words for ideas, so if you can learn a language, you can learn to code.
 
-Javascript and Java are popular languages, but they're not easy to program in. So instead of conforming, we're going to take advantage of the technological advances in the last few years and start by learning a modern language called Elm. This language allows us to create modern applications in a fraction of the time of the more "popular" languages. More importantly, it also enforces good coding practices by design, so you can learn to program the right way naturally and then take those good habits to larger languages that allow you to do anything, whether it's a good idea or not.
+The first language I tried to learn was C++, which looks something like this.
+
+{% highlight c++ %}
+quickSort(arr[], low, high)
+{
+  if (low < high)
+  {
+    pi = partition(arr, low, high);
+    quickSort(arr, low, pi - 1);
+    quickSort(arr, pi + 1, high);
+  }
+}
+partition (arr[], low, high)
+{
+  pivot = arr[high];  
+  i = (low - 1)
+  for (j = low; j <= high- 1; j++)
+  {
+    if (arr[j] <= pivot)
+    {
+      i++;
+      swap arr[i] and arr[j]
+    }
+  }
+  swap arr[i + 1] and arr[high])
+  return (i + 1)
+}
+{% endhighlight %}
+
+This kind of code gives me anxiety just looking at it, and this is supposed to be a "simple" program. The good news is that we can make computers speak any language we want, so why use a language like that? C++ was invented in the 70s, and computers have come a long way in the last 40 years. We don't need to code the way we did back then.
+
+So instead of conforming, we're going to take advantage of the advances of the last few years and start by learning a modern language called Elm. This language was designed to allow us to create modern applications in a fraction of the time of the more "traditional" languages. 
 
 <!-- ### But I need to learn Javascript to get a job!
 

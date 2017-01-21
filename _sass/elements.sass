@@ -490,6 +490,8 @@
       top: 0
       &.language-html
         +label("HTML", $html5, white)
+      &.language-c--
+        +label("C++", $html5, white)
       &.language-css
         +label("CSS", $css3, white)
       &.language-elm
@@ -535,7 +537,8 @@
     font-family: inherit
     font-size: inherit
     border-bottom: 2px solid $pink
-    padding-bottom: 3px
+    margin-bottom: 2px
+    padding-bottom: 0
     color: rgba(#333, .8)
     &.red
       border-bottom: 2px solid $pink

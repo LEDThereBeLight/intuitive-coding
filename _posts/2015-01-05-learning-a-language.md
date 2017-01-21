@@ -40,26 +40,26 @@ Using a *declarative* English question, we might ask,
 Does the list contain "Chips Ahoy Cookies"?
 {: .quote}
 
-Not so bad.
+Not so bad. We're just *declaring* what we want to know.
 
-Now what about if we wanted to use imperative sentences?
+Now what about if we had to use imperative sentences?
 
 Say the person who has the list is a complete idiot. Instead of just asking them if something is in the list, you have to tell them how to look. You might say something like,
 
 Look in the list to see if it contains "Chips Ahoy Cookies" and tell me yes or no.
 {: .quote}
 
-But you forgot to explain how to look in the list.
+But you won't get an answer, because you forgot to explain how to look in the list.
 
 Fine... go through the items in the list one by one and tell me if any of them are "Chips Ahoy Cookies".
 {: .quote}
 
-Oops! You forgot to say when to stop, so you never get your answer!
+Oops! You're making progress, but you forgot to say when to stop, so you still never get your answer!
 
 Okay, go through the items in the list one by one and if any of them are "Chips Ahoy Cookies", stop looking and tell me "Yes". Otherwise, if you get to the end of the list, stop looking and tell me "No".
 {: .quote}
 
-I don't know about you, but I'm sick of this already and we haven't even gotten to coding. It's like a trap in some terrible video game that exists just to make you angry.
+I don't know about you, but I'm sick of this already and we haven't even gotten to coding. And for many years, this was the only way to program. Fortunately, there are better ways to do things now.
 
 ### What this means for our code
 
@@ -74,7 +74,7 @@ cookies = "Chips Ahoy Cookies"
 answer = List.member cookies shoppingList
 {% endhighlight %}
 
-And here's the translation into Javascript.
+And here's the translation into old-school Javascript, a largely imperative language.
 
 {% highlight js %}
 var list = ["Nutella", "Frozen Pizza", "Ranch Dressing", "Potato Chips (ruffled)"];
@@ -142,9 +142,7 @@ In our case, the person who wrote the Elm language takes care of converting our 
 
 This is great, because it means learning to program is more like learning a language than it is like learning a science. It's just a language that tells a computer what to do. Once you learn the most common words, you can get your point across, even if you sound a little bit awkward.
 
-------
-
-### Optional Note:
+<!-- ### Optional Note:
 
 This section hints at a very deep concept that sits at the heart of computer science. But we're not hinting anymore. The idea is that we as authors must choose the way we word our code. If we want, we can code at the level of the machine and explicitly write out every instruction for the computer to perform. This is called **low level** programming. The benefit of coding in this way is that our programs will run faster because they are doing *exactly* what we want - no more, no less. The downsides of coding at this level are that it takes longer to write, and it's easy to get lost in the machine instructions and lose sight of the higher level problems that we're trying to solve. Read the final version of the "translated" sentence above and compare it to the original version written by JK Rowling. Which is easier to understand?
 
@@ -152,4 +150,4 @@ On the opposite end of the spectrum, we can write code at a **high level**, expl
 
 One of the most valuable skills of a coder is being able to work at the right level of **abstraction**, meaning choosing between using high level concepts or low level instructions. A specific problem might be easy to solve at a high level, or it might be impossible.
 
-There are examples of programming languages on every part of the abstraction scale. Low level languages include Machine Languages and Assembly Code. High level languages include Elm, Haskell, Ruby, and Python. And somewhere in between are languages like C, Javascript, and Java.
+There are examples of programming languages on every part of the abstraction scale. Low level languages include Machine Languages and Assembly Code. High level languages include Elm, Haskell, Ruby, and Python. And somewhere in between are languages like C, Javascript, and Java. -->

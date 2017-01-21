@@ -1,17 +1,16 @@
 ---
-layout: problem
-title: "Python"
+layout: post
+title: "Javascript"
 section: solving-problems
 comments: true
 ---
 
-### High percentage plays
+### Inputs to functions
 
-#### The most common functions
+We know we can pass "data" as inputs to functions. We do that anytime we
 
-There is always more than one way to solve a problem. In programming languages, just like in natural languages, some words are more valuable to know than others. 
+There is always more than one way to solve a problem. In programming languages, just like in natural languages, some words are more valuable to know than others.
 
-### The problem
 
 How could we use negative indexes to write a function that creates a new, reversed String from an existing String?
 

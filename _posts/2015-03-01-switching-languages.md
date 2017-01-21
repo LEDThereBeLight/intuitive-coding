@@ -8,13 +8,7 @@ comments: true
 
 ### Where to go from here
 
-What are you interested in?
-
-Web programming:
-  * Continue with Elm's [official guide](https://guide.elm-lang.org/install.html)
-  * Try an Elm [unofficial tutorial](https://www.elm-tutorial.org/en/)
-  * [Learn Javascript](http://eloquentjavascript.net/)
-  * Learn [Facebook's React](https://facebook.github.io/react/)
+I'm building this out, but in the meantime, here are some places to get you started.
 
 Coding for interviews:
   * Learn [computer science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)
@@ -29,7 +23,7 @@ Artificial Intelligence:
 
 ### Plans for the future:
 
-Switching languages (to either Typescript or Python) and continuing with coding:
+Switching to the Javascript language and continuing with coding:
 
   * data structures (linked lists, queues, arrays)
   * basic algorithms
