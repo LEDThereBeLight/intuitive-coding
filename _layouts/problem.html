@@ -125,7 +125,7 @@ comments: true
 var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
   extraKeys: {"Ctrl-Space": "autocomplete"},
   theme: "zenburn",
-  mode: "python",
+  mode: "javascript",
   lineWrapping: true,
   lineNumbers: true
 });
@@ -133,7 +133,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 TOKEN = { time_created: 1484414579000,
   msg_mac: '5r6MafaXqs92cak3tO2hjMl5LnZIh5crBynVNNzaV+I=' }
 
-var repl = new ReplitClient('api.repl.it', '80', 'python', TOKEN);
+var repl = new ReplitClient('api.repl.it', '80', 'javascript', TOKEN);
 
 repl.connect().then(
     function() {
