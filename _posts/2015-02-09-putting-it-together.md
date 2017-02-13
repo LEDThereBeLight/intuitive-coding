@@ -42,6 +42,7 @@ One of the functions in the module, called `onClick`, listens for mouse clicks f
 `onClick` takes one input: the message it should send when it's triggered by a mouse click. In our program, our messages are just Strings.
 
 Remember, Html functions take two inputs:
+
   1. a list of attributes, things that affect the element itself
   2. a list of children elements
 
@@ -67,17 +68,27 @@ Don't be fooled by the name. This function isn't for beginners, it's just the wi
 
 `Html.beginnerProgram` takes a view, a model, and an update function, wires them together to create an interactive application, and creates an Html value capable of producing Messages. Here's the flow:
 
+
+
 1. A user presses a button that we told to listen for "clicks"
 ![button](https://media.giphy.com/media/cNPrsXBpZJZx6/giphy.gif)
+
+
 
 2. The view sends a message to the update as its first input
 ![message](https://media.giphy.com/media/PyyTxFoyXpoD6/giphy.gif)
 
+
+
 3. The update grabs the model as its second input and runs, creating a new, updated model
 ![generator](https://media.giphy.com/media/3o6ozvTAmjn8gDzbRC/giphy.gif)
 
+
+
 4. The app throws away the old model and keeps the new model
 ![youths](https://media.giphy.com/media/qG2h9G9NMRRE4/giphy.gif)
+
+
 
 5. The model tells the view that it needs to change, and the page redraws only the components that are different
 ![transform](https://media.giphy.com/media/5yLgocvrcL4Vi9dh5Ac/giphy.gif)

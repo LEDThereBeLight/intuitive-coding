@@ -96,5 +96,6 @@ This sentence means to literally say the words in quotations - there's no meanin
 Coding uses the same idea. If we are writing code and want to talk about actual letters or words themselves, rather than the ideas they represent, we put the letters in quotations.
 
 ### So, to recap
+
 * Single letters go in single quotes, and we call them *Characters*
 * Multiple letters go in double quotes, and we call them *Strings*

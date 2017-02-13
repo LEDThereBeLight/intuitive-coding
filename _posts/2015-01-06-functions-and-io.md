@@ -51,6 +51,7 @@ Functions are not able to affect anywhere else in the program - they are complet
 ### In short
 
 Remember:
+
   * functions can take in inputs, but they don't have to
   * functions always give us something back
   * we tell the computer to run a function by calling its name

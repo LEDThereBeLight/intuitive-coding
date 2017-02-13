@@ -6,7 +6,7 @@ section: app-building
 comments: true
 ---
 
-### In progress section. The rough outline is here for you to read if you're interested, otherwise it will be cleaned up and explained better soon.
+### In progress section
 
 ### Pulling GIFs from the web
 

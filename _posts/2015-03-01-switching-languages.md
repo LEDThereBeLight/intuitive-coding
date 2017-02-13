@@ -11,11 +11,13 @@ comments: true
 I'm building this out, but in the meantime, here are some places to get you started.
 
 Coding for interviews:
+
   * Learn [computer science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)
   * Learn [data structures and algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/)
   * Do [practice problems](http://codewars.com/)
 
 Artificial Intelligence:
+
   * Learn [the basics](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lecture-videos/)
   * Implement the algorithms
   * Practice [with a game](http://www.screeps.com)
@@ -36,11 +38,11 @@ The idea is to work through interview questions in each section with a guide on 
 
 Later:
 
-* artificial intelligence
-	* goal trees
-	* rule based systems
-	* game theory and searching
-	* constraints
-	* visual recognition
-	* neural nets
-	* machine learning
+  * artificial intelligence
+  	* goal trees
+  	* rule based systems
+  	* game theory and searching
+  	* constraints
+  	* visual recognition
+  	* neural nets
+  	* machine learning
