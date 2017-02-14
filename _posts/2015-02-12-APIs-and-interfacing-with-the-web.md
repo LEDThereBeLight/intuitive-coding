@@ -8,6 +8,8 @@ comments: true
 
 ### In progress section
 
+You've been warned.
+
 ### Pulling GIFs from the web
 
 It's finally time to extend our app to pull in images from the web, rather than just showing the GIFs we hardcoded into the page. We'll add a search bar for the user to choose a category of picture which will be fetched from the Giphy API and shown on the page.

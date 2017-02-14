@@ -39,10 +39,10 @@ The idea is to work through interview questions in each section with a guide on 
 Later:
 
   * artificial intelligence
-  	* goal trees
-  	* rule based systems
-  	* game theory and searching
-  	* constraints
-  	* visual recognition
-  	* neural nets
-  	* machine learning
+	* goal trees
+	* rule based systems
+	* game theory and searching
+	* constraints
+	* visual recognition
+	* neural nets
+	* machine learning
