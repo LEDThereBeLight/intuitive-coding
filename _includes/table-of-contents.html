@@ -17,22 +17,22 @@
         {% for post in site.posts reversed %}
           {% capture currentsection %}{{ post.section }}{% endcapture %}
           {% if currentsection == "elm" %}
-            {% capture currentmonth %}{{ post.date | date: "%m" }}{% endcapture %}
-            {% if currentmonth != month %}
+            <!-- {% capture currentmonth %}{{ post.date | date: "%m" }}{% endcapture %} -->
+            <!-- {% if currentmonth != month %} -->
               <li class="toc-month">
                 <a href="{{ post.url }}">
                   <em>{{currentmonth}}</em>
                   {{ post.title | strip_html }}
                 </a>
               </li>
-              {% capture month %}{{currentmonth}}{% endcapture %}
-            {% else %}
+              <!-- {% capture month %}{{currentmonth}}{% endcapture %} -->
+            <!-- {% else %} -->
               <li>
                 <a href="{{ post.url }}" {%if page.url == post.url %} class="active"{% endif %}>
                   {{ post.title }}
                 </a>
               </li>
-            {% endif %}
+            <!-- {% endif %} -->
           {% endif %}
         {% endfor %}
       </ol>

@@ -63,18 +63,16 @@
     +replace(url("/images/marksheet-hello.png"), 420px, 384px)
 
 .logo
-  //+replace(url("/images/marksheet-logo.png"), 230px, 48px)
   float: left
   height: 40px
   left: 10px
   position: absolute
-  top: 10px
+  top: 15px
   +mobile
     background-position: left center
     width: 48px
   +desktop
     left: 0
-
 .start
   +replace(url("/images/button-start-reading.png"), 243px, 64px)
   background-position: 0 0
@@ -610,14 +608,16 @@
     margin-top: 1em
     padding: 1em 1em 0
 
-#text-editor-wrap
+.text-editor-wrap
   margin: auto
   max-width: 530px
-  border-radius: 10px
-  box-shadow: rgba(0,0,0,0.8) 0px 20px 50px
+  border-radius: 3px
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2)
   transition: all 0.5s ease-out
-  #title-bar
-    text-align: center
+  .title-text
+    padding-right: 55px
+  .title-bar
+    cursor: default
     padding: 5px 0
     height: 30px
     line-height: 20px
@@ -630,7 +630,29 @@
     border-top-left-radius: inherit
     border-top-right-radius: inherit
     border-bottom: #6a6a6a 1px solid
-  #text-body
+    .mac-buttons
+      display: inline-block
+      width: 55px
+      height: 100%
+      float: left
+      .button
+        padding-left: 8px
+        padding-top: 3px
+        width: 11px
+        height: 11px
+        border-radius: 50%
+        display: inline-block
+        border: 1px solid black
+      .close
+        background: #ff5c5c
+        border-color: #e33e41
+      .minimize
+        background: #ffbd4c
+        border-color: #e09e3e
+      .zoom
+        background: #00ca56
+        border-color: #14ae46
+  .text-body
     height: 200px
     background-color: rgba(0,0,0,0.8)
     padding: 10px
@@ -645,7 +667,6 @@
     word-wrap: break-word
     border-bottom-left-radius: inherit
     border-bottom-right-radius: inherit
-
 
 .typed-cursor
   opacity: 1

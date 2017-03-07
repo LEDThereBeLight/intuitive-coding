@@ -7,9 +7,19 @@ route: index
 <section class="index-hello">
   <div class="index-hello-content">
     <h1>Intuitive Coding</h1>
-    <div id="text-editor-wrap">
-      <div id="title-bar">bash — 530x220</div>
-      <div id="text-body">
+    <div class="text-editor-wrap">
+
+      <div class="title-bar">
+        <div class="mac-buttons">
+          <div class="button close"></div>
+          <div class="button minimize"></div>
+          <div class="button zoom"></div>
+        </div>
+        <div class="title-text">
+          bash — 530x220
+        </div>
+      </div>
+      <div class="text-body">
         $ <span id="typed"></span>
       </div>
     </div>
@@ -29,17 +39,17 @@ route: index
   </div>
 </section>
 
-<!-- <section class="toc-head">
+<section class="toc-head">
   <div class="container">
     <p class="toc-column--sections">
-      <strong>2</strong> sections
+      Sections
     </p>
 
     <p class="toc-column--lessons">
-      <strong>20</strong> lessons
+      Lessons
     </p>
   </div>
-</section> -->
+</section>
 
 {% include table-of-contents.html %}
 

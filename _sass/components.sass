@@ -79,94 +79,6 @@
       border-radius: 3px 3px 0 0
       box-shadow: 0 30px 60px rgba(black, .3)
 
-.page-newsletter
-  background-color: $red
-  background-image: linear-gradient(142deg, adjust-hue($red, -20deg), adjust-hue($red, -10deg) 31%, $red 65%, adjust-hue($red, 10deg))
-  color: $yellow
-  padding: 30px
-  position: relative
-  strong
-    color: inherit
-  +desktop
-    padding: 60px 40px 80px
-
-.page-newsletter-heading
-  position: relative
-  text-align: center
-  text-shadow: 0 1px 2px rgba(black, .2)
-  .icons
-    display: block
-    height: 120px
-    margin: 0 auto
-    position: relative
-    width: 120px
-    .fa
-      +fa(42px, 120px)
-      +overlay
-    .fa-television
-      font-size: 84px
-    .fa-play-circle
-      color: white
-      left: -3px
-      top: -6px
-  h3
-    color: white
-    font-size: 32px
-    line-height: 1
-    position: relative
-  p
-    font-size: 18px
-  +desktop
-    h3
-      font-size: 40px
-    p
-      font-size: 20px
-      margin-top: 5px
-
-.page-newsletter-form
-  margin: 30px auto 0
-  max-width: 480px
-
-.page-newsletter-group
-  position: relative
-  .fa
-    color: $light
-    font-size: 14px
-    pointer-events: none
-    position: absolute
-    left: 10px
-    top: 10px
-  label.error
-    cursor: default
-    display: block
-    font-size: 14px
-    margin: 5px 0 10px
-  +desktop
-    padding-right: 100px
-
-.page-newsletter-input
-  border: none
-  border-radius: $radius
-  display: block
-  outline: none
-  padding: 6px 12px 8px 32px
-  width: 100%
-  +mobile
-    margin-bottom: 10px
-
-.page-newsletter-button
-  @extend %button--dark
-  &.loading
-    background: $dark
-    border-color: transparent
-    box-shadow: none
-    color: rgba(white, 0.3)
-    cursor: progress
-  +desktop
-    position: absolute
-    right: 0
-    top: 0
-
 .page-footer
   background: $dark
   position: relative
@@ -311,19 +223,25 @@ html.has-menu-open
   height: 40px
   margin-top: -40px
   .container
-    background-color: rgba(black, .2)
-    color: white
+    background-color: #f4f1ce
+    color: #b5b188
     padding-top: 10px
     border-radius: 3px 3px 0 0
     box-shadow: inset 0 -3px 3px rgba(black, .1), 0 -1px 0 rgba(white, .1)
     height: 40px
+
   +mobile
     display: none
 
 .toc-column
+  cursor: default
   position: absolute
   top: 0
-  width: 80px
+  width: 100px
+  padding: 5px 0px
+  line-height: 30px
+  text-shadow: 0 1px 0 white
+  font-weight: 400
 
 .toc-column--sections
   @extend .toc-column
@@ -343,7 +261,6 @@ html.has-menu-open
 .toc-component
   position: relative
   .container
-    border-radius: 10px
     background: white
   +desktop
     .container
@@ -375,11 +292,15 @@ html.has-menu-open
   small
     color: $light
     display: block
+    font-weight: 400
+    span
+      font-weight: 400
   em
     display: block
     font-style: normal
     line-height: 1.2
     margin-top: 10px
+    font-weight: 400
     strong
       color: $light
   +mobile
@@ -399,7 +320,6 @@ html.has-menu-open
     display: block
   a
     border: 1px solid transparent
-    border-radius: 3px
     display: block
     padding: 5px 10px 7px
     strong
@@ -431,12 +351,8 @@ html.has-menu-open
       a
         padding-left: 230px
     .toc-month
-      left: 10px
-      position: absolute
-      width: 220px
-      z-index: 1
       a
-        padding-left: 10px
+        padding-left: 209px
 
 .toc-section--web
   .fa,

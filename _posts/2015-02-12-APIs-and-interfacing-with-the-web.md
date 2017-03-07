@@ -611,7 +611,7 @@ import Json.Decode as Decode
 
 main =
     Html.program
-        { init = searchFor "cats"
+        { init = init "cats"
         , view = view
         , update = update
         , subscriptions = subscriptions
@@ -626,7 +626,7 @@ type alias Model =
 
 
 init : String -> ( Model, Cmd Message )
-init = ( Model "" "" "", getRandomGif topic )
+init topic = ( Model "" "" "", getRandomGif topic )
 
 
 type Message
@@ -706,7 +706,7 @@ decodeGifUrl =
 
 
 pageStyle =
-    style [ ( "text-align", "center" ) ]
+    style [ ( "text-align", "center" ), ( "font-family", "Helvetica") ]
 
 
 inputStyle =
@@ -724,7 +724,7 @@ inputStyle =
 
 
 titleStyle =
-    style [ ( "font-size", "2em" ), ( "color", "#333" ) ]
+    style [ ( "font-size", "2em" ), ( "color", "#333" ),  ]
 
 
 buttonStyle =
