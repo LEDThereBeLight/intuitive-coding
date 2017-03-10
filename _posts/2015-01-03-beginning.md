@@ -20,4 +20,4 @@ main = Html.text "Sucking at something is the first step towards being sorta goo
 
 **Compile** has a specific meaning in computer programming. It means to translate from one language to another. In this case, we're *compiling* from Elm to Javascript, and then the [www.elm-lang.org](http://www.elm-lang.org/) website takes that code behind the scenes and displays the result on the other screen.
 
-You shouldn't understand this code yet - we'll explain it soon. Just get a feel for the result of running it.
+We'll explain the code soon. Just get a feel for the result of running it.

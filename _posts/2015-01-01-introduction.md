@@ -40,8 +40,4 @@ This kind of code gives me anxiety just looking at it, and this is supposed to b
 
 So instead of conforming, we're going to take advantage of the advances of the last few years and start by learning a modern language called Elm. This language was designed to allow us to create modern applications in a fraction of the time of the more "traditional" languages.
 
-<!-- ### But I need to learn Javascript to get a job!
-
-If you want to learn Javascript, or Python, or any other mainstream language, trust me when I tell you that starting with Elm to learn the underlying concepts will make your life easier. My goal is to get you to learn coding as quickly as possible, not to push any specific language on you. The concepts you will learn through Elm will *all* transfer over to the other languages. Besides, once you know how to code, you're realize the language *doesn't matter*. -->
-
 Let's begin.

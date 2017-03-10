@@ -12,7 +12,7 @@ What are you interested in? I'm building this out, but in the meantime, here are
 
 Web / App Development:
 
-I recommend getting comfortable with Elm and building some small projects, and then following up with Javascript afterwards. Most tech giants and startups use Javascript for their webapps, so it's probably the best use of your time. Most of the concepts you learn with Elm will transfer over into Javascript, but you'll just have to deal with the inconsistencies that come with a larger language.
+I recommend getting comfortable with Elm and building some small projects, and then following up with Javascript afterwards. Javascript is the language of the web, so it's probably the best use of your time. Most of the concepts you learn with Elm will transfer over into Javascript, but you'll just have to deal with the inconsistencies that come with a larger language. You'll learn Javascript much faster if you already understand how to code, and Elm is a better language for learning how to code.
 
 If you liked coding in Elm, try the unofficial [Elm Tutorial](https://www.elm-tutorial.org/en/) or the official [Elm Guide](https://guide.elm-lang.org/). The [Elm Slack channel](https://elmlang.herokuapp.com/) is also full of people who love to help.
 

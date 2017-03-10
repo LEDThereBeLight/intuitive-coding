@@ -4,21 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-In progress section	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### In progress section$/;"	function	line:9
-Pulling GIFs from the web	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Pulling GIFs from the web$/;"	function	line:13
-So... what's an API?	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### So... what's an API?$/;"	function	line:17
-Changing our view	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Changing our view$/;"	function	line:25
-A new model	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### A new model$/;"	function	line:75
-Upgrading our beginnerApp	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Upgrading our beginnerApp$/;"	function	line:159
-init	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### init$/;"	function	line:186
-Subscriptions	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Subscriptions$/;"	function	line:243
-Updating the `update`	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Updating the `update`$/;"	function	line:256
-Fetching new pictures	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Fetching new pictures$/;"	function	line:282
-HTTP requests	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### HTTP requests$/;"	function	line:331
-The Giphy API	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### The Giphy API$/;"	function	line:335
-The Random endpoint	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### The Random endpoint$/;"	function	line:348
-Postman	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Postman$/;"	function	line:358
-URL Parameters	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### URL Parameters$/;"	function	line:436
-Sending a request with parameters	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Sending a request with parameters$/;"	function	line:479
-Parsing with decoders	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Parsing with decoders$/;"	function	line:511
-GETting the image	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### GETting the image$/;"	function	line:546
+Functions	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-01-06-functions-and-io.md	/^### Functions$/;"	function	line:9
+I/O	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-01-06-functions-and-io.md	/^### I\/O$/;"	function	line:19
+In short	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-01-06-functions-and-io.md	/^### In short$/;"	function	line:39
