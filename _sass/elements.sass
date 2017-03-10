@@ -401,7 +401,7 @@
     img
       box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
       border-radius: 2px
-      display: inherit
+      background-size: contain
       margin: auto
     img + em
       display: inline-block
@@ -483,11 +483,15 @@
       top: 0
       &.language-html
         +label("HTML", $html5, white)
+      &.language-shell
+        +label("Terminal", $hero-3, white)
       &.language-c--
         +label("C++", $html5, white)
       &.language-css
         +label("CSS", $css3, white)
       &.language-elm
+        +label("Elm", $web, white)
+      &.language-haskell
         +label("Elm", $web, white)
       &.language-scss
         +label("SCSS", $sass, white)
@@ -697,79 +701,3 @@
     opacity: 0
   100%
     opacity: 1
-//
-// .typed-cursor
-//   opacity: 1
-//   -webkit-animation: blink 1s infinite
-//   -moz-animation: blink 1s infinite
-//   animation: blink 1s infinite
-// @keyframes: blink {
-//   0% { opacity:1; }
-//   50% { opacity:0; }
-//   100% { opacity:1; }
-// }
-// @-webkit-keyframes: blink{
-//   0% { opacity:1; }
-//   50% { opacity:0; }
-//   100% { opacity:1; }
-// }
-// @-moz-keyframes: blink{
-//   0% { opacity:1; }
-//   50% { opacity:0; }
-//   100% { opacity:1; }
-// }
-
-
-$carbon-space: 15px
-
-#carbon
-  background: white
-  border-radius: 5px
-  box-shadow: 0 10px 20px rgba(black, .2)
-  font-size: 14px
-  padding: $carbon-space
-
-#carbonads
-  text-align: left
-  text-shadow: none
-  a:hover
-    text-decoration: underline
-  span
-    display: block
-  .carbon-img
-    display: block
-    height: 100px
-    width: 130px
-    img
-      display: block
-  .carbon-text
-    display: block
-    color: $strong
-    margin-bottom: 5px
-  .carbon-poweredby
-    font-size: $small
-
-+until(1099px)
-  #carbon
-    margin-left: auto
-    margin-right: auto
-    max-width: 340px
-    min-height: 100px + ($carbon-space * 2)
-    min-width: 300px
-  #carbonads
-    .carbon-img
-      float: left
-    .carbon-text
-      margin-left: 130px + $carbon-space
-    .carbon-poweredby
-      margin-left: $carbon-space
-
-+from(1100px)
-  #carbon
-    bottom: 15px
-    position: fixed
-    right: 15px
-    width: 160px
-  #carbonads
-    .carbon-img
-      margin-bottom: 10px

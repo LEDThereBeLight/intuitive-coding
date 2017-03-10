@@ -4,86 +4,60 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-.container	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.container$/;"	function	line:1
-#disqus_thread	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^#disqus_thread$/;"	function	line:10
-.CodeMirror	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.CodeMirror$/;"	function	line:15
-.banner	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.banner$/;"	function	line:18
-em	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  em$/;"	function	line:35
-.fa	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  .fa$/;"	function	line:43
-strong	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  strong$/;"	function	line:47
-em	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  em$/;"	function	line:49
-em	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    em$/;"	function	line:56
-.hello	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.hello$/;"	function	line:59
-.logo	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.logo$/;"	function	line:65
-.start	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.start$/;"	function	line:76
-.heading	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.heading$/;"	function	line:81
-.container	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  .container$/;"	function	line:86
-strong	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  strong$/;"	function	line:88
-h1	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  h1$/;"	function	line:90
-em	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    em$/;"	function	line:92
-h2	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  h2$/;"	function	line:95
-h1	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    h1$/;"	function	line:99
-h2	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    h2$/;"	function	line:101
-.container	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    .container$/;"	function	line:103
-.breadcrumb	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.breadcrumb$/;"	function	line:110
-span	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  span$/;"	function	line:158
-.fa	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  .fa$/;"	function	line:173
-span	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  span$/;"	function	line:195
-.fa	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  .fa$/;"	function	line:199
-.menu	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.menu$/;"	function	line:217
-li	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  li$/;"	function	line:220
-a	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  a$/;"	function	line:222
-.pagination	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.pagination$/;"	function	line:225
-em	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  em$/;"	function	line:237
-strong	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  strong$/;"	function	line:253
-strong	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    strong$/;"	function	line:259
-.elevator	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.elevator$/;"	function	line:278
-.fa	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    .fa$/;"	function	line:291
-span	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    span$/;"	function	line:294
-.content	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^.content$/;"	function	line:315
-a	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  a$/;"	function	line:320
-code	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  code$/;"	function	line:323
-dt	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    dt$/;"	function	line:336
-dd	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    dd$/;"	function	line:340
-h3	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  h3$/;"	function	line:345
-a	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    a$/;"	function	line:354
-a	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      a$/;"	function	line:370
-a	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      a$/;"	function	line:373
-a	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^        a$/;"	function	line:385
-h4	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  h4$/;"	function	line:387
-p	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  p$/;"	function	line:395
-img	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    img$/;"	function	line:401
-pre	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  pre$/;"	function	line:414
-ul	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  ul$/;"	function	line:419
-ul	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    ul$/;"	function	line:423
-ul	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      ul$/;"	function	line:425
-li	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      li$/;"	function	line:435
-img	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^        img$/;"	function	line:439
-strong	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^        strong$/;"	function	line:441
-pre	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    pre$/;"	function	line:450
-.info	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  .info$/;"	function	line:502
-.quote	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  .quote$/;"	function	line:511
-.answer	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  .answer$/;"	function	line:540
-.question	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    .question$/;"	function	line:545
-.important	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  .important$/;"	function	line:551
-.result	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  .result$/;"	function	line:556
-.table	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  .table$/;"	function	line:566
-table	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    table$/;"	function	line:569
-td	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      td$/;"	function	line:574
-th	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      th$/;"	function	line:587
-strong	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^        strong$/;"	function	line:592
-code	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      code$/;"	function	line:594
-pre	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      pre$/;"	function	line:598
-.footnotes	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  .footnotes$/;"	function	line:605
-.button	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      .button$/;"	function	line:638
-.close	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      .close$/;"	function	line:646
-.minimize	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      .minimize$/;"	function	line:649
-.zoom	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^      .zoom$/;"	function	line:652
-#carbon	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^#carbon$/;"	function	line:725
-#carbonads	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^#carbonads$/;"	function	line:732
-span	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  span$/;"	function	line:737
-img	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^    img$/;"	function	line:743
-#carbon	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  #carbon$/;"	function	line:753
-#carbonads	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  #carbonads$/;"	function	line:759
-#carbon	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  #carbon$/;"	function	line:768
-#carbonads	C:\Users\zacha_000\workspace\intuitive-coding\_sass\elements.sass	/^  #carbonads$/;"	function	line:773
+section	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^<section class="toc-component">$/;"	function	line:1
+div	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^  <div class="container">$/;"	function	line:2
+article	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^    <article class="toc-section toc-section--web">$/;"	function	line:3
+div	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <div class="toc-heading">$/;"	function	line:4
+i	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <i class="fa fa-code"><\/i>$/;"	function	line:5
+h	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <h3>$/;"	function	line:6
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <a href="\/introduction.html">What is coding?<\/a>$/;"	function	line:7
+small	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <small>$/;"	function	line:9
+span	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <span>10<\/span> lessons$/;"	function	line:10
+em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <em>$/;"	function	line:12
+ol	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <ol class="toc-content">$/;"	function	line:16
+li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li class="toc-month">$/;"	function	line:22
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}">$/;"	function	line:23
+em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                  <em>{{currentmonth}}<\/em>$/;"	function	line:24
+li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li>$/;"	function	line:30
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}" {%if page.url == post.url %} class="active"{% endif %}>$/;"	function	line:31
+article	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^    <article class="toc-section toc-section--html5">$/;"	function	line:41
+div	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <div class="toc-heading">$/;"	function	line:42
+i	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <i class="fa fa-play-circle"><\/i>$/;"	function	line:43
+h	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <h3>$/;"	function	line:44
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <a href="\/html-basics.html">Our first app<\/a>$/;"	function	line:45
+small	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <small>$/;"	function	line:47
+span	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <span>12<\/span> lessons$/;"	function	line:48
+em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <em>$/;"	function	line:50
+ol	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <ol class="toc-content">$/;"	function	line:54
+li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li class="toc-month">$/;"	function	line:60
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}">$/;"	function	line:61
+em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                  <em>{{currentmonth}}<\/em>$/;"	function	line:62
+li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li>$/;"	function	line:68
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}" {%if page.url == post.url %} class="active"{% endif %}>$/;"	function	line:69
+article	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^    <article class="toc-section toc-section--css3">$/;"	function	line:79
+div	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <div class="toc-heading">$/;"	function	line:80
+i	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <i class="fa fa-usd"><\/i>$/;"	function	line:81
+h	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <h3>$/;"	function	line:82
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <a href="\/css-basics.html">Solving problems<\/a>$/;"	function	line:83
+small	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <small>$/;"	function	line:85
+span	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <span>29<\/span> lessons$/;"	function	line:86
+em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <em>$/;"	function	line:88
+ol	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <ol class="toc-content">$/;"	function	line:94
+li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li class="toc-month">$/;"	function	line:100
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}">$/;"	function	line:101
+em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                  <em>{{currentmonth}}<\/em>$/;"	function	line:102
+li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li>$/;"	function	line:108
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}" {%if page.url == post.url %} class="active"{% endif %}>$/;"	function	line:109
+div	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <div class="toc-heading">$/;"	function	line:120
+i	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <i class="fa fa-rocket"><\/i>$/;"	function	line:121
+h	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <h3>$/;"	function	line:122
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <a href="\/sass.html">Sass<\/a>$/;"	function	line:123
+small	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <small>$/;"	function	line:125
+span	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <span>5<\/span> lessons$/;"	function	line:126
+em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <em>$/;"	function	line:128
+ol	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <ol class="toc-content">$/;"	function	line:132
+li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li class="toc-month">$/;"	function	line:138
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}">$/;"	function	line:139
+em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                  <em>{{currentmonth}}<\/em>$/;"	function	line:140
+li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li>$/;"	function	line:146
+a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}" {%if page.url == post.url %} class="active"{% endif %}>$/;"	function	line:147
