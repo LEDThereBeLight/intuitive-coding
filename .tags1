@@ -4,60 +4,21 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-section	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^<section class="toc-component">$/;"	function	line:1
-div	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^  <div class="container">$/;"	function	line:2
-article	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^    <article class="toc-section toc-section--web">$/;"	function	line:3
-div	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <div class="toc-heading">$/;"	function	line:4
-i	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <i class="fa fa-code"><\/i>$/;"	function	line:5
-h	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <h3>$/;"	function	line:6
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <a href="\/introduction.html">What is coding?<\/a>$/;"	function	line:7
-small	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <small>$/;"	function	line:9
-span	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <span>10<\/span> lessons$/;"	function	line:10
-em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <em>$/;"	function	line:12
-ol	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <ol class="toc-content">$/;"	function	line:16
-li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li class="toc-month">$/;"	function	line:22
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}">$/;"	function	line:23
-em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                  <em>{{currentmonth}}<\/em>$/;"	function	line:24
-li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li>$/;"	function	line:30
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}" {%if page.url == post.url %} class="active"{% endif %}>$/;"	function	line:31
-article	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^    <article class="toc-section toc-section--html5">$/;"	function	line:41
-div	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <div class="toc-heading">$/;"	function	line:42
-i	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <i class="fa fa-play-circle"><\/i>$/;"	function	line:43
-h	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <h3>$/;"	function	line:44
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <a href="\/html-basics.html">Our first app<\/a>$/;"	function	line:45
-small	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <small>$/;"	function	line:47
-span	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <span>12<\/span> lessons$/;"	function	line:48
-em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <em>$/;"	function	line:50
-ol	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <ol class="toc-content">$/;"	function	line:54
-li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li class="toc-month">$/;"	function	line:60
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}">$/;"	function	line:61
-em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                  <em>{{currentmonth}}<\/em>$/;"	function	line:62
-li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li>$/;"	function	line:68
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}" {%if page.url == post.url %} class="active"{% endif %}>$/;"	function	line:69
-article	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^    <article class="toc-section toc-section--css3">$/;"	function	line:79
-div	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <div class="toc-heading">$/;"	function	line:80
-i	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <i class="fa fa-usd"><\/i>$/;"	function	line:81
-h	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <h3>$/;"	function	line:82
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <a href="\/css-basics.html">Solving problems<\/a>$/;"	function	line:83
-small	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <small>$/;"	function	line:85
-span	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <span>29<\/span> lessons$/;"	function	line:86
-em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <em>$/;"	function	line:88
-ol	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <ol class="toc-content">$/;"	function	line:94
-li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li class="toc-month">$/;"	function	line:100
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}">$/;"	function	line:101
-em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                  <em>{{currentmonth}}<\/em>$/;"	function	line:102
-li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li>$/;"	function	line:108
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}" {%if page.url == post.url %} class="active"{% endif %}>$/;"	function	line:109
-div	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <div class="toc-heading">$/;"	function	line:120
-i	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <i class="fa fa-rocket"><\/i>$/;"	function	line:121
-h	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <h3>$/;"	function	line:122
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <a href="\/sass.html">Sass<\/a>$/;"	function	line:123
-small	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <small>$/;"	function	line:125
-span	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^          <span>5<\/span> lessons$/;"	function	line:126
-em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^        <em>$/;"	function	line:128
-ol	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^      <ol class="toc-content">$/;"	function	line:132
-li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li class="toc-month">$/;"	function	line:138
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}">$/;"	function	line:139
-em	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                  <em>{{currentmonth}}<\/em>$/;"	function	line:140
-li	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^              <li>$/;"	function	line:146
-a	C:\Users\zacha_000\workspace\intuitive-coding\_includes\table-of-contents.html	/^                <a href="{{ post.url }}" {%if page.url == post.url %} class="active"{% endif %}>$/;"	function	line:147
+In progress section	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### In progress section$/;"	function	line:9
+Pulling GIFs from the web	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Pulling GIFs from the web$/;"	function	line:13
+So... what's an API?	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### So... what's an API?$/;"	function	line:17
+Changing our view	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Changing our view$/;"	function	line:25
+A new model	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### A new model$/;"	function	line:75
+Upgrading our beginnerApp	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Upgrading our beginnerApp$/;"	function	line:159
+init	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### init$/;"	function	line:186
+Subscriptions	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Subscriptions$/;"	function	line:243
+Updating the `update`	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Updating the `update`$/;"	function	line:256
+Fetching new pictures	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Fetching new pictures$/;"	function	line:282
+HTTP requests	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### HTTP requests$/;"	function	line:331
+The Giphy API	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### The Giphy API$/;"	function	line:335
+The Random endpoint	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### The Random endpoint$/;"	function	line:348
+Postman	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Postman$/;"	function	line:358
+URL Parameters	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### URL Parameters$/;"	function	line:436
+Sending a request with parameters	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Sending a request with parameters$/;"	function	line:479
+Parsing with decoders	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### Parsing with decoders$/;"	function	line:511
+GETting the image	C:\Users\zacha_000\workspace\intuitive-coding\_posts\2015-02-13-APIs-and-interfacing-with-the-web.md	/^### GETting the image$/;"	function	line:546
